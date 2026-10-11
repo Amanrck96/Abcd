@@ -121,9 +121,10 @@ button {
 }
 
 .logo-img {
-  height: 28px;
+  height: 36px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .nav-download-btn {
@@ -544,7 +545,7 @@ button {
 }
 
 .footer-logo-img {
-  height: 24px;
+  height: 32px;
   width: auto;
   object-fit: contain;
 }
