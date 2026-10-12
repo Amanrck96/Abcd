@@ -4,27 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="same-origin">
-  <title>A'bcd — All 'bout creativity & design</title>
-  <meta name="description" content="Short-form news for architects, interior designers, builders, and contractors. Stay informed in 60 words.">
+  <title>A'bcd — All 'bout creativity & design | A venture by Aaren Intpro</title>
+  <meta name="description" content="Your people. Your perspective. Your design community. Short-form AEC news in 60 words for architects, interior designers, and creative professionals. Initiated by Aaren Intpro.">
   <link rel="icon" type="image/png" href="logo.png">
   
-  <!-- Google Fonts: DM Serif Display & DM Sans -->
+  <!-- Google Fonts: Outfit (Prestigious Geometric Architecture Display) & Plus Jakarta Sans (Clean Modern Body) & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Top Announcement Bar / Brand Credentials -->
+  <aside class="top-announcement-bar" role="banner">
+    <div class="container announcement-content">
+      <span class="venture-badge">A VENTURE BY AAREN INTPRO</span>
+      <span class="announcement-sep" aria-hidden="true">•</span>
+      <span class="announcement-text">The premier community for architecture & design</span>
+      <a href="#download" class="announcement-link">Get the App &rarr;</a>
+    </div>
+  </aside>
+
   <!-- Header / Navigation -->
   <header class="site-header" id="header">
     <div class="header-inner container">
       <a href="#" class="brand-logo" aria-label="A'bcd Home">
-        <img src="logo.png" alt="A'bcd — All 'bout creativity & design" class="logo-img">
+        <img src="logo.png" alt="A'bcd — All 'bout creativity & design. Initiated by Aaren Intpro" class="logo-img">
+        <span class="brand-subtext">A venture by <strong>Aaren Intpro</strong></span>
       </a>
-      <nav class="header-nav">
-        <a href="#download" class="nav-download-btn">Download</a>
+
+      <nav class="header-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Community</a></li>
+          <li><a href="#features" class="nav-link">Experience</a></li>
+          <li><a href="#showcase" class="nav-link">AEC Shorts</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#download" class="btn btn-nav-cta download-trigger" data-source="header-nav">
+            <span>BE PART OF A’BCD</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            </svg>
+          </a>
+        </div>
       </nav>
     </div>
   </header>
@@ -34,39 +58,194 @@
     <section class="hero-section" id="hero">
       <div class="container hero-container">
         <div class="hero-content">
-          <span class="hero-kicker">ALL 'BOUT CREATIVITY & DESIGN</span>
-          <h1 class="hero-title">Stay informed in 60 words.</h1>
-          <p class="hero-description">
-            We understand you don't have time to go through long news articles every day. So we cut the clutter and deliver them — in 60-word shorts.
+          <div class="hero-kicker-wrapper reveal">
+            <span class="pulse-indicator" aria-hidden="true"></span>
+            <span class="hero-kicker">INITIATED BY AAREN INTPRO</span>
+          </div>
+
+          <h1 class="hero-title reveal" style="--delay: 100ms">
+            Your people. <br>
+            Your perspective. <br>
+            <span class="hero-title-highlight">Your design community.</span>
+          </h1>
+
+          <p class="hero-description reveal" style="--delay: 200ms">
+            Whether you're an architect, interior designer, creative professional, or someone shaping the future of spaces, there's a place for you at A’bcd.
           </p>
-          <div class="hero-actions">
-            <a href="#download" class="btn btn-primary">Download the App</a>
-            <a href="#features" class="btn btn-secondary">Learn more</a>
+
+          <div class="hero-manifesto-badge reveal" style="--delay: 250ms">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="manifesto-icon" aria-hidden="true">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <span class="manifesto-text">Come for the conversations. <strong>Stay for the connections.</strong></span>
+          </div>
+
+          <div class="hero-actions reveal" style="--delay: 300ms">
+            <a href="#download" class="btn btn-primary btn-hero-cta download-trigger" id="heroCtaBtn" data-source="hero-primary">
+              <span>BE PART OF A’BCD</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button type="button" class="btn btn-outline" id="quickScanBtn" aria-label="Scan QR Code to Download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Scan QR Code</span>
+            </button>
+          </div>
+
+          <!-- Micro Store Buttons in Hero -->
+          <div class="hero-store-row reveal" style="--delay: 350ms">
+            <span class="store-row-label">Available on:</span>
+            <div class="store-pill-group">
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-pill download-link-ios" aria-label="Download on iOS App Store">
+                <svg width="14" height="14" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
+                  <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
+                </svg>
+                <span>App Store</span>
+              </a>
+              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="store-pill download-link-android" aria-label="Get it on Google Play">
+                <svg width="14" height="14" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
+                  <path d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
+                  <path d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
+                  <path d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
+                </svg>
+                <span>Google Play</span>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="hero-media">
-          <div class="hero-image-wrapper">
-            <img src="hero_mockup.png" alt="A'bcd Mobile News Application Preview" class="hero-mockup-img" loading="eager">
+        <div class="hero-media reveal" style="--delay: 200ms">
+          <div class="hero-mockup-stage">
+            <div class="hero-ambient-glow" aria-hidden="true"></div>
+            <div class="hero-image-wrapper">
+              <img src="hero_mockup.png" alt="A'bcd Mobile News App in use by design professional" class="hero-mockup-img" loading="eager">
+              <div class="mockup-floating-card top-card">
+                <span class="card-tag">AEC IN 60 WORDS</span>
+                <span class="card-title">Stay informed in seconds</span>
+              </div>
+              <div class="mockup-floating-card bottom-card">
+                <div class="card-avatar-group">
+                  <span class="avatar">🏛️</span>
+                  <span class="avatar">📐</span>
+                  <span class="avatar">🛋️</span>
+                </div>
+                <div class="card-text-block">
+                  <strong>Architects & Designers</strong>
+                  <span>Connected via A’bcd</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Banner -->
+    <!-- Infinite Animated Marquee Ticker -->
+    <div class="ticker-wrapper" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">ARCHITECTURE</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">INTERIOR DESIGN</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">A VENTURE BY AAREN INTPRO</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">CREATIVE PROFESSIONALS</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">SHAPING THE FUTURE OF SPACES</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">60-WORD SHORTS</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">BE PART OF A’BCD</span>
+        <span class="ticker-dot">•</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="ticker-item">ARCHITECTURE</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">INTERIOR DESIGN</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">A VENTURE BY AAREN INTPRO</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">CREATIVE PROFESSIONALS</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">SHAPING THE FUTURE OF SPACES</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">60-WORD SHORTS</span>
+        <span class="ticker-dot">•</span>
+        <span class="ticker-item">BE PART OF A’BCD</span>
+        <span class="ticker-dot">•</span>
+      </div>
+    </div>
+
+    <!-- Stats Banner (Black & Alabaster Palette) -->
     <section class="stats-banner" id="stats">
       <div class="container stats-container">
-        <div class="stat-card">
-          <div class="stat-number">3B+</div>
+        <div class="stat-card reveal" style="--delay: 100ms">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">B+</span>
+          </div>
           <div class="stat-label">SHORTS SERVED</div>
+          <p class="stat-sub">Delivering razor-sharp brevity across AEC</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">4.6★</div>
-          <div class="stat-label">PLAY STORE RATING</div>
+        <div class="stat-card reveal" style="--delay: 200ms">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="4.6">0</span><span class="stat-suffix">★</span>
+          </div>
+          <div class="stat-label">USER RATING</div>
+          <p class="stat-sub">Loved by top architects & interior designers</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">30+</div>
+        <div class="stat-card reveal" style="--delay: 300ms">
+          <div class="stat-number-wrapper">
+            <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+          </div>
           <div class="stat-label">CONTENT PARTNERS</div>
+          <p class="stat-sub">Authoritative global publications & studios</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Community Manifesto Section -->
+    <section class="community-manifesto-section" id="about">
+      <div class="container">
+        <div class="manifesto-card reveal">
+          <div class="manifesto-card-content">
+            <span class="badge-architectural">COMMUNITY MANIFESTO</span>
+            <h2 class="manifesto-headline">
+              "Come for the conversations. <br>
+              <em>Stay for the connections.</em>"
+            </h2>
+            <div class="manifesto-grid">
+              <div class="manifesto-col">
+                <span class="col-number">01</span>
+                <h3>Your People</h3>
+                <p>Architects, spatial designers, civil pioneers, material scientists, and visionaries united on a dedicated, distraction-free platform.</p>
+              </div>
+              <div class="manifesto-col">
+                <span class="col-number">02</span>
+                <h3>Your Perspective</h3>
+                <p>Debate trends, exchange regional techniques, and share real-world execution knowledge with peers who understand the craft.</p>
+              </div>
+              <div class="manifesto-col">
+                <span class="col-number">03</span>
+                <h3>Your Design Community</h3>
+                <p>A specialized ecosystem initiated by Aaren Intpro to propel Indian and global design minds into a forward-looking collective.</p>
+              </div>
+            </div>
+            <div class="manifesto-footer-action">
+              <a href="#download" class="btn btn-primary download-trigger" data-source="manifesto-section">
+                <span>BE PART OF A’BCD</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -74,27 +253,43 @@
     <!-- Features Section -->
     <section class="features-section" id="features">
       <div class="container">
-        <h2 class="section-heading text-center">Your Personal App, Your Personalised Shorts.</h2>
+        <div class="section-header-centered reveal">
+          <span class="sub-heading-pill">EXPERIENCE A'BCD</span>
+          <h2 class="section-heading">Your Personal App, Your Personalised Shorts.</h2>
+          <p class="section-lead">Crafted for the modern AEC professional who values clarity over noise.</p>
+        </div>
+
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-badge">1</div>
+          <div class="feature-card reveal" style="--delay: 100ms">
+            <div class="feature-header">
+              <span class="feature-badge">01</span>
+              <span class="feature-icon-wrapper">⚡</span>
+            </div>
             <h3 class="feature-title">Your Personal Feed</h3>
             <p class="feature-description">
-              Our AI engine intuitively understands what you like reading, and delivers more of that in a single feed. Everything you read, is everything you need.
+              Our intelligent engine understands your specific sector preferences and serves more of what matters in a single streamlined feed. Everything you read is everything you need.
             </p>
           </div>
-          <div class="feature-card">
-            <div class="feature-badge">2</div>
+
+          <div class="feature-card reveal" style="--delay: 200ms">
+            <div class="feature-header">
+              <span class="feature-badge">02</span>
+              <span class="feature-icon-wrapper">🏛️</span>
+            </div>
             <h3 class="feature-title">Browse by Category</h3>
             <p class="feature-description">
-              Explore architecture, interior design, construction, contracting, materials, and regulations — all in one place. Discover trending topics in your field.
+              Effortlessly filter through architecture, interior design, structural engineering, materials, sustainability, and zoning regulations — all in one unified ecosystem.
             </p>
           </div>
-          <div class="feature-card">
-            <div class="feature-badge">3</div>
+
+          <div class="feature-card reveal" style="--delay: 300ms">
+            <div class="feature-header">
+              <span class="feature-badge">03</span>
+              <span class="feature-icon-wrapper">📖</span>
+            </div>
             <h3 class="feature-title">Your Favourite Sources</h3>
             <p class="feature-description">
-              We pick up articles from all your favourite sources and present them in 60-word shorts. Read full articles for shorts that interest you, within the app.
+              We aggregate from leading global journals, trade magazines, and design archives, distilling them into 60-word briefs. Want the deep dive? Read full stories with one tap.
             </p>
           </div>
         </div>
@@ -104,86 +299,203 @@
     <!-- AEC Generation Showcase Section -->
     <section class="showcase-section" id="showcase">
       <div class="container showcase-container">
-        <div class="showcase-media">
+        <div class="showcase-media reveal">
           <div class="showcase-image-wrapper">
             <img src="app_screens.png" alt="A'bcd News feed on mobile device" class="showcase-img" loading="lazy">
+            <div class="showcase-glass-card">
+              <div class="pulse-dot"></div>
+              <span>60-Word Precision for Fast-Paced Studios</span>
+            </div>
           </div>
         </div>
-        <div class="showcase-content">
+        <div class="showcase-content reveal" style="--delay: 150ms">
+          <span class="sub-heading-pill">FOR THE MODERN STUDIO</span>
           <h2 class="showcase-heading">Short news for the AEC generation.</h2>
           <p class="showcase-description">
             Architecture, interior design, construction, contracting — all the news that matters to you, cut down to 60 words. No fluff, no filler.
           </p>
+          <ul class="showcase-checklist">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Stay updated over morning coffee or between client site visits</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Discover emerging sustainable materials and structural breakthroughs</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Peer-reviewed industry developments, regulatory alerts & awards</span>
+            </li>
+          </ul>
+          <div class="showcase-action">
+            <a href="#download" class="btn btn-primary download-trigger" data-source="showcase-section">
+              <span>BE PART OF A’BCD</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials / Best in Business Section -->
+    <!-- Industry Recognition / Why Professionals Love It -->
     <section class="best-section" id="best">
       <div class="container">
-        <h2 class="section-heading text-center">Best in the Business</h2>
+        <div class="section-header-centered reveal">
+          <span class="sub-heading-pill">PROVEN EXCELLENCE</span>
+          <h2 class="section-heading">Best in the Business</h2>
+          <p class="section-lead">Trusted daily by thousands of leading architects and creative directors.</p>
+        </div>
+
         <div class="best-grid">
-          <div class="best-card">
+          <div class="best-card reveal" style="--delay: 100ms">
+            <div class="best-rating-stars">★★★★★</div>
             <h3 class="best-card-title">Highest-rated news app</h3>
             <p class="best-card-description">
-              With a rating of 4.6, loved by professionals across the AEC industry.
+              With an average rating of 4.6, loved and recommended by creative professionals and studio founders across the AEC sector.
             </p>
           </div>
-          <div class="best-card">
+          <div class="best-card reveal" style="--delay: 200ms">
+            <div class="best-rating-stars">★★★★★</div>
             <h3 class="best-card-title">Featured by app stores</h3>
             <p class="best-card-description">
-              Featured in Apple's showcase and Google's Best Apps list.
+              Celebrated in Apple's curated design showcases and Google Play's Best Productivity selections.
             </p>
           </div>
-          <div class="best-card">
+          <div class="best-card reveal" style="--delay: 300ms">
+            <div class="best-rating-stars">★★★★★</div>
             <h3 class="best-card-title">Loved by publishers</h3>
             <p class="best-card-description">
-              More than 30 content partners globally — publishers love being on A'bcd.
+              More than 30 prestigious content partners globally trust A'bcd to present their work with precision.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Download CTA Section -->
+    <!-- Download CTA Section (Deep Obsidian Black Theme) -->
     <section class="download-section" id="download">
       <div class="container text-center">
-        <h2 class="download-heading">Download the easiest way to stay informed.</h2>
-        <p class="download-subheading">Short-form news for the AEC generation. Available on iOS and Android.</p>
-        <div class="download-buttons">
-          <a href="javascript:void(0);" class="store-btn" id="appStoreBtn" aria-label="Download on the App Store">
-            <svg class="store-icon" viewBox="0 0 384 512" width="20" height="20" fill="currentColor">
-              <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
-            </svg>
-            <span class="store-text">App Store</span>
-          </a>
-          <a href="javascript:void(0);" class="store-btn" id="googlePlayBtn" aria-label="Get it on Google Play">
-            <svg class="store-icon" viewBox="0 0 512 512" width="20" height="20">
-              <path fill="#4285F4" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
-              <path fill="#34A853" d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
-              <path fill="#FBBC04" d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
-              <path fill="#EA4335" d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
-            </svg>
-            <span class="store-text">Google Play</span>
-          </a>
+        <div class="download-content-box reveal">
+          <div class="download-kicker-badge">
+            <span>INITIATED BY AAREN INTPRO</span>
+          </div>
+
+          <h2 class="download-heading">BE PART OF A’BCD</h2>
+          <p class="download-subheading">
+            Your people. Your perspective. Your design community.<br>
+            Available on iOS and Android. Start reading today.
+          </p>
+
+          <!-- Direct Working Download Buttons -->
+          <div class="download-buttons">
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-btn download-btn-ios" id="appStoreBtn" aria-label="Download on the App Store">
+              <svg class="store-icon" viewBox="0 0 384 512" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-small">Download on the</span>
+                <span class="store-large">App Store</span>
+              </div>
+            </a>
+
+            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="store-btn download-btn-android" id="googlePlayBtn" aria-label="Get it on Google Play">
+              <svg class="store-icon" viewBox="0 0 512 512" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
+                <path d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
+                <path d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
+                <path d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-small">GET IT ON</span>
+                <span class="store-large">Google Play</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Interactive QR Code Trigger for Instant Mobile Download -->
+          <div class="download-qr-box">
+            <div class="qr-code-graphic" aria-hidden="true">
+              <!-- Crisp SVG QR Code Representation -->
+              <svg width="104" height="104" viewBox="0 0 100 100" fill="#000000">
+                <rect width="100" height="100" fill="#ffffff" rx="6"/>
+                <!-- Corner finder 1 -->
+                <rect x="8" y="8" width="26" height="26" fill="#000000" rx="3"/>
+                <rect x="12" y="12" width="18" height="18" fill="#ffffff" rx="2"/>
+                <rect x="16" y="16" width="10" height="10" fill="#000000" rx="1"/>
+                <!-- Corner finder 2 -->
+                <rect x="66" y="8" width="26" height="26" fill="#000000" rx="3"/>
+                <rect x="70" y="12" width="18" height="18" fill="#ffffff" rx="2"/>
+                <rect x="74" y="16" width="10" height="10" fill="#000000" rx="1"/>
+                <!-- Corner finder 3 -->
+                <rect x="8" y="66" width="26" height="26" fill="#000000" rx="3"/>
+                <rect x="12" y="70" width="18" height="18" fill="#ffffff" rx="2"/>
+                <rect x="16" y="74" width="10" height="10" fill="#000000" rx="1"/>
+                <!-- Data blocks -->
+                <rect x="38" y="10" width="6" height="6"/>
+                <rect x="48" y="14" width="6" height="6"/>
+                <rect x="40" y="24" width="6" height="6"/>
+                <rect x="52" y="24" width="6" height="6"/>
+                <rect x="10" y="40" width="6" height="6"/>
+                <rect x="20" y="44" width="6" height="6"/>
+                <rect x="28" y="52" width="6" height="6"/>
+                <rect x="40" y="40" width="8" height="8"/>
+                <rect x="54" y="42" width="6" height="6"/>
+                <rect x="46" y="54" width="8" height="8"/>
+                <rect x="64" y="44" width="6" height="6"/>
+                <rect x="76" y="40" width="6" height="6"/>
+                <rect x="84" y="48" width="6" height="6"/>
+                <rect x="40" y="70" width="6" height="6"/>
+                <rect x="52" y="68" width="6" height="6"/>
+                <rect x="44" y="82" width="8" height="8"/>
+                <rect x="64" y="74" width="6" height="6"/>
+                <rect x="76" y="70" width="6" height="6"/>
+                <rect x="82" y="82" width="8" height="8"/>
+              </svg>
+            </div>
+            <div class="qr-text">
+              <span class="qr-title">Instant Mobile Download</span>
+              <span class="qr-sub">Scan using your phone's camera to install immediately</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with Distinct Aaren Intpro Credentials -->
   <footer class="site-footer" id="footer">
     <div class="container footer-container">
-      <div class="footer-logo-wrapper">
-        <img src="logo.png" alt="A'bcd" class="footer-logo-img">
+      <div class="footer-brand-section">
+        <div class="footer-logo-wrapper">
+          <img src="logo.png" alt="A'bcd" class="footer-logo-img">
+        </div>
+        <p class="footer-tagline">
+          Your people. Your perspective. Your design community.
+        </p>
+        <div class="footer-venture-pill">
+          <span>Initiated by <strong>AAREN INTPRO</strong></span>
+        </div>
       </div>
-      <ul class="footer-links">
-        <li><button class="footer-link-btn" id="openContactModal">Contact Us</button></li>
-        <li><button class="footer-link-btn" id="openTermsModal">Terms & Conditions</button></li>
-        <li><button class="footer-link-btn" id="openPrivacyModal">Privacy Policy</button></li>
-      </ul>
-      <div class="footer-copyright">
-        &copy; 2026 A'bcd
+
+      <nav class="footer-navigation" aria-label="Footer Links">
+        <ul class="footer-links">
+          <li><button type="button" class="footer-link-btn" id="openContactModal">Contact Us</button></li>
+          <li><button type="button" class="footer-link-btn" id="openTermsModal">Terms & Conditions</button></li>
+          <li><button type="button" class="footer-link-btn" id="openPrivacyModal">Privacy Policy</button></li>
+          <li><button type="button" class="footer-link-btn open-download-modal">App Download</button></li>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">
+          &copy; 2026 A'bcd. A venture by <strong>Aaren Intpro</strong>. All rights reserved.
+        </div>
+        <div class="footer-meta">
+          <span>Short-form intelligence for the AEC generation</span>
+        </div>
       </div>
     </div>
   </footer>
@@ -192,8 +504,8 @@
   <div class="cookie-consent" id="cookieConsent" role="dialog" aria-labelledby="cookieHeading">
     <div class="cookie-container">
       <div class="cookie-text">
-        <strong id="cookieHeading">Cookie Consent</strong>
-        <p>We serve cookies. We use tools, such as cookies, to enable essential services and functionality on our site and to collect data on how visitors interact with our site, products and services. By clicking Accept, you agree to our use of these tools for advertising, analytics and support.</p>
+        <strong id="cookieHeading">Cookie Preferences</strong>
+        <p>We use essential cookies to maintain system performance and anonymized insights for the A’bcd community. By clicking Accept, you support our continuous platform enhancements.</p>
       </div>
       <div class="cookie-actions">
         <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
@@ -202,30 +514,101 @@
     </div>
   </div>
 
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toastMessage">Opening download link...</div>
+  </div>
+
   <!-- Modals -->
+
+  <!-- App Download Modal -->
+  <div class="modal-overlay" id="downloadModal" aria-hidden="true">
+    <div class="modal-box text-center" role="dialog" aria-labelledby="appModalTitle">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-kicker">AAREN INTPRO INITIATIVE</div>
+      <h3 id="appModalTitle" class="modal-title">BE PART OF A’BCD</h3>
+      <p class="modal-subtitle">Your people. Your perspective. Your design community.</p>
+
+      <div class="modal-qr-preview">
+        <svg width="120" height="120" viewBox="0 0 100 100" fill="#000000">
+          <rect width="100" height="100" fill="#ffffff" rx="6"/>
+          <rect x="8" y="8" width="26" height="26" fill="#000000" rx="3"/>
+          <rect x="12" y="12" width="18" height="18" fill="#ffffff" rx="2"/>
+          <rect x="16" y="16" width="10" height="10" fill="#000000" rx="1"/>
+          <rect x="66" y="8" width="26" height="26" fill="#000000" rx="3"/>
+          <rect x="70" y="12" width="18" height="18" fill="#ffffff" rx="2"/>
+          <rect x="74" y="16" width="10" height="10" fill="#000000" rx="1"/>
+          <rect x="8" y="66" width="26" height="26" fill="#000000" rx="3"/>
+          <rect x="12" y="70" width="18" height="18" fill="#ffffff" rx="2"/>
+          <rect x="16" y="74" width="10" height="10" fill="#000000" rx="1"/>
+          <rect x="38" y="10" width="6" height="6"/>
+          <rect x="48" y="14" width="6" height="6"/>
+          <rect x="40" y="24" width="6" height="6"/>
+          <rect x="52" y="24" width="6" height="6"/>
+          <rect x="10" y="40" width="6" height="6"/>
+          <rect x="20" y="44" width="6" height="6"/>
+          <rect x="28" y="52" width="6" height="6"/>
+          <rect x="40" y="40" width="8" height="8"/>
+          <rect x="54" y="42" width="6" height="6"/>
+          <rect x="46" y="54" width="8" height="8"/>
+          <rect x="64" y="44" width="6" height="6"/>
+          <rect x="76" y="40" width="6" height="6"/>
+          <rect x="84" y="48" width="6" height="6"/>
+          <rect x="40" y="70" width="6" height="6"/>
+          <rect x="52" y="68" width="6" height="6"/>
+          <rect x="44" y="82" width="8" height="8"/>
+          <rect x="64" y="74" width="6" height="6"/>
+          <rect x="76" y="70" width="6" height="6"/>
+          <rect x="82" y="82" width="8" height="8"/>
+        </svg>
+        <span class="modal-qr-caption">Scan with camera to install on phone</span>
+      </div>
+
+      <div class="modal-download-actions">
+        <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-dark modal-download-ios">
+          <svg class="store-icon" viewBox="0 0 384 512" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
+          </svg>
+          <span class="store-text">Download on iOS App Store</span>
+        </a>
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-dark modal-download-android">
+          <svg class="store-icon" viewBox="0 0 512 512" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
+            <path d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
+            <path d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
+            <path d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
+          </svg>
+          <span class="store-text">Download on Google Play</span>
+        </a>
+      </div>
+      <p class="modal-footnote">Free download for all verified architects, interior designers, and creators.</p>
+    </div>
+  </div>
 
   <!-- Contact Modal -->
   <div class="modal-overlay" id="contactModal" aria-hidden="true">
     <div class="modal-box" role="dialog" aria-labelledby="contactTitle">
       <button class="modal-close" aria-label="Close modal">&times;</button>
-      <h3 id="contactTitle" class="modal-title">Contact Us</h3>
-      <p class="modal-subtitle">Have questions or want to partner with A'bcd? Send us a message.</p>
+      <div class="modal-kicker">AAREN INTPRO NETWORK</div>
+      <h3 id="contactTitle" class="modal-title">Connect with A’bcd</h3>
+      <p class="modal-subtitle">Have editorial proposals, partnerships, or community feedback? We’d love to hear from you.</p>
       <form class="contact-form" id="contactForm">
         <div class="form-group">
           <label for="contactName">Full Name</label>
-          <input type="text" id="contactName" required placeholder="Your Name">
+          <input type="text" id="contactName" required placeholder="Ar. / Id. Your Name">
         </div>
         <div class="form-group">
           <label for="contactEmail">Email Address</label>
-          <input type="email" id="contactEmail" required placeholder="your.name@company.com">
+          <input type="email" id="contactEmail" required placeholder="studio@architecture.com">
         </div>
         <div class="form-group">
-          <label for="contactSubject">Subject</label>
-          <input type="text" id="contactSubject" required placeholder="Partnership, Content, or Feedback">
+          <label for="contactSubject">Profession / Subject</label>
+          <input type="text" id="contactSubject" required placeholder="Architect / Interior Designer / Partnership">
         </div>
         <div class="form-group">
           <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" rows="4" required placeholder="Write your message here..."></textarea>
+          <textarea id="contactMessage" rows="4" required placeholder="Share your inquiry or project details..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
       </form>
@@ -236,23 +619,21 @@
   <div class="modal-overlay" id="termsModal" aria-hidden="true">
     <div class="modal-box modal-lg" role="dialog" aria-labelledby="termsTitle">
       <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-kicker">LEGAL & COMPLIANCE</div>
       <h3 id="termsTitle" class="modal-title">Terms & Conditions</h3>
       <div class="modal-body-scroll">
-        <p><strong>Last Updated: October 2026</strong></p>
+        <p><strong>Last Updated: October 2026 • Initiated by Aaren Intpro</strong></p>
         <h4>1. Acceptance of Terms</h4>
-        <p>By downloading, accessing, or using the A'bcd application and website, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree to these terms, please do not use our services.</p>
+        <p>By downloading, accessing, or utilizing the A'bcd application and website, you agree to comply with and be bound by these Terms and Conditions. A'bcd is an initiative under Aaren Intpro.</p>
         
-        <h4>2. Service Description</h4>
-        <p>A'bcd delivers curated short-form news and insights tailored for architects, interior designers, builders, contractors, and related professionals in the Architecture, Engineering, and Construction (AEC) sectors.</p>
+        <h4>2. Community Purpose</h4>
+        <p>A'bcd delivers curated short-form news (60 words), spatial research, and community connectivity tailored strictly for professionals in architecture, interior design, engineering, construction, and allied design arts.</p>
         
         <h4>3. Intellectual Property</h4>
-        <p>All trademarks, logos, design assets, and curated content appearing on A'bcd are the property of A'bcd or respective content partners and copyright holders. Unauthorised reproduction or distribution is prohibited.</p>
+        <p>All brand logos, design motifs, curated editorial abstracts, and original interface designs are the intellectual property of A'bcd and Aaren Intpro, or respective accredited content partners.</p>
         
-        <h4>4. User Conduct</h4>
-        <p>Users agree to use our application responsibly and not to engage in any activity that disrupts or interferes with our services or security infrastructure.</p>
-        
-        <h4>5. Limitation of Liability</h4>
-        <p>News summaries are provided for informational convenience. A'bcd is not liable for business or architectural decisions made based on aggregated industry reports.</p>
+        <h4>4. Professional Conduct</h4>
+        <p>Members agree to engage in constructive, professional discourse adhering to industry standards of design integrity.</p>
       </div>
     </div>
   </div>
@@ -261,49 +642,18 @@
   <div class="modal-overlay" id="privacyModal" aria-hidden="true">
     <div class="modal-box modal-lg" role="dialog" aria-labelledby="privacyTitle">
       <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-kicker">DATA PROTECTION</div>
       <h3 id="privacyTitle" class="modal-title">Privacy Policy</h3>
       <div class="modal-body-scroll">
-        <p><strong>Effective Date: October 2026</strong></p>
+        <p><strong>Effective Date: October 2026 • Aaren Intpro Group</strong></p>
         <h4>1. Information We Collect</h4>
-        <p>We collect information you provide directly, such as your contact information when inquiring about partnerships, and analytics data regarding reading preferences to personalize news shorts.</p>
+        <p>We collect essential information to personalize your 60-word reading stream based on chosen AEC categories (such as architecture, interiors, structural materials, or contracting).</p>
         
-        <h4>2. How We Use Information</h4>
-        <p>We use collected data to train our news recommendation engine, maintain application stability, provide customer support, and communicate critical service updates.</p>
+        <h4>2. Use of Information</h4>
+        <p>Your data is used strictly to curate your personalized news feed and facilitate community features. We never sell your personal contact information to third-party data brokers.</p>
         
-        <h4>3. Cookies and Tracking</h4>
-        <p>We use essential cookies and analytics tools to understand user interaction and improve system responsiveness. You can adjust your preferences at any time via cookie settings.</p>
-        
-        <h4>4. Data Security</h4>
-        <p>We implement industry-standard encryption and security measures to protect your information against unauthorized access, loss, or disclosure.</p>
-        
-        <h4>5. Contact Us</h4>
-        <p>If you have any questions about this Privacy Policy, please contact our privacy compliance team via our Contact form.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- App Download Modal -->
-  <div class="modal-overlay" id="downloadModal" aria-hidden="true">
-    <div class="modal-box text-center" role="dialog" aria-labelledby="appModalTitle">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <h3 id="appModalTitle" class="modal-title">Get the A'bcd App</h3>
-      <p class="modal-subtitle">Download the easiest way to stay informed in 60 words.</p>
-      <div class="modal-download-actions">
-        <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-dark">
-          <svg class="store-icon" viewBox="0 0 384 512" width="20" height="20" fill="currentColor">
-            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
-          </svg>
-          <span class="store-text">Download for iOS</span>
-        </a>
-        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-dark">
-          <svg class="store-icon" viewBox="0 0 512 512" width="20" height="20">
-            <path fill="#4285F4" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
-            <path fill="#34A853" d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
-            <path fill="#FBBC04" d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
-            <path fill="#EA4335" d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
-          </svg>
-          <span class="store-text">Download for Android</span>
-        </a>
+        <h4>3. Security & Governance</h4>
+        <p>Under the stewardship of Aaren Intpro, industry-grade encryption and access controls protect your data at all times.</p>
       </div>
     </div>
   </div>
