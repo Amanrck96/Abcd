@@ -1,6 +1,7 @@
 /**
- * A'bcd — Client-Side Logic, Animations & Download Handlers
- * A Venture by Aaren Intpro
+ * A’bcd — All ’Bout Creativity and Designs
+ * A Community Initiative by AAREN INTPRO
+ * Client-Side Logic, Modal Controllers, Form Handlers & Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastMessage = document.getElementById('toastMessage');
   let toastTimer = null;
 
-  const showToast = (message, duration = 3000) => {
+  const showToast = (message, duration = 3500) => {
     if (!toastNotification || !toastMessage) return;
     toastMessage.textContent = message;
     toastNotification.classList.add('active');
-    
+
     if (toastTimer) clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
       toastNotification.classList.remove('active');
@@ -59,87 +60,128 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Modal Triggers
-  document.getElementById('openContactModal')?.addEventListener('click', () => {
-    openModal('contactModal');
+  // 3. Membership Modal Triggers ("BECOME A MEMBER" / "JOIN THE COMMUNITY" / "JOIN A'BCD")
+  document.querySelectorAll('.open-membership-modal').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('membershipModal');
+    });
   });
 
-  document.getElementById('openTermsModal')?.addEventListener('click', () => {
+  // 4. Contact Modal Triggers ("GET IN TOUCH" / "Contact Us")
+  const contactTriggers = [
+    document.getElementById('navContactTrigger'),
+    document.getElementById('finalContactBtn'),
+    document.getElementById('openContactModal')
+  ];
+
+  contactTriggers.forEach((btn) => {
+    btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('contactModal');
+    });
+  });
+
+  // 5. Legal Modals
+  document.getElementById('openTermsModal')?.addEventListener('click', (e) => {
+    e.preventDefault();
     openModal('termsModal');
   });
 
-  document.getElementById('openPrivacyModal')?.addEventListener('click', () => {
+  document.getElementById('openPrivacyModal')?.addEventListener('click', (e) => {
+    e.preventDefault();
     openModal('privacyModal');
   });
 
-  document.querySelectorAll('.open-download-modal').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal('downloadModal');
-    });
-  });
-
-  document.getElementById('quickScanBtn')?.addEventListener('click', () => {
-    openModal('downloadModal');
-  });
-
-  // 4. Download Trigger Handling (Desktop & Mobile device awareness)
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const isAndroid = /Android/.test(navigator.userAgent);
-
-  const handleDownloadAction = (source = 'button') => {
-    if (isIOS) {
-      showToast('Opening iOS App Store...');
-      setTimeout(() => {
-        window.open('https://apps.apple.com', '_blank');
-      }, 400);
-    } else if (isAndroid) {
-      showToast('Opening Google Play Store...');
-      setTimeout(() => {
-        window.open('https://play.google.com/store', '_blank');
-      }, 400);
-    } else {
-      // Desktop: Open the comprehensive download modal with QR scan & links
-      openModal('downloadModal');
-      showToast('Scan QR code with your phone or select your store');
+  // 6. Smooth Scroll for "DISCOVER A'BCD"
+  document.getElementById('heroSecondaryBtn')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById('community');
+    if (target) {
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
+  });
+
+  // 7. Membership Form Interactive Submission (Modal & Dedicated Page)
+  const handleMembershipSubmit = (form, isModal = false) => {
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span>Submitting Application...</span>';
+
+      setTimeout(() => {
+        btn.innerHTML = '<span>Application Received ✓</span>';
+        btn.style.backgroundColor = '#81663F';
+        showToast('Welcome to A’bcd. Your application has been submitted to the curation committee.');
+
+        setTimeout(() => {
+          form.reset();
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+          btn.style.backgroundColor = '';
+          if (isModal) {
+            closeModal(document.getElementById('membershipModal'));
+          }
+        }, 1600);
+      }, 700);
+    });
   };
 
-  // Connect download buttons
-  document.querySelectorAll('.download-trigger').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      // If user clicked an anchor with hash #download on desktop, let smooth scroll happen or open modal
-      const source = btn.getAttribute('data-source') || 'cta';
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        handleDownloadAction(source);
-      } else {
-        // On desktop, clicking "BE PART OF A’BCD" opens download modal if desired or scrolls smoothly
-        // If it's a hero primary CTA or header, we can open the modal directly for instant download experience!
-        if (source === 'hero-primary' || source === 'header-nav') {
-          e.preventDefault();
-          openModal('downloadModal');
-        }
-      }
-    });
-  });
+  handleMembershipSubmit(document.getElementById('membershipForm'), true);
+  handleMembershipSubmit(document.getElementById('pageMembershipForm'), false);
 
-  // Store direct links feedback
-  const iosButtons = document.querySelectorAll('.download-btn-ios, .download-link-ios, .modal-download-ios');
-  iosButtons.forEach((btn) => {
+  // 8. Contact Form Interactive Submission (Modal & Dedicated Page)
+  const handleContactSubmit = (form, isModal = false) => {
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span>Transmitting Message...</span>';
+
+      setTimeout(() => {
+        btn.innerHTML = '<span>Message Dispatched ✓</span>';
+        btn.style.backgroundColor = '#81663F';
+        showToast('Thank you. A’bcd community team will connect with you shortly.');
+
+        setTimeout(() => {
+          form.reset();
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+          btn.style.backgroundColor = '';
+          if (isModal) {
+            closeModal(document.getElementById('contactModal'));
+          }
+        }, 1600);
+      }, 600);
+    });
+  };
+
+  handleContactSubmit(document.getElementById('contactForm'), true);
+  handleContactSubmit(document.getElementById('pageContactForm'), false);
+
+  // 9. Store Direct Links Feedback
+  document.querySelectorAll('.download-link-ios, .store-badge-pill[href*="apple"]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      showToast('Connecting to Apple App Store...');
+      showToast('Opening iOS App Store for A’bcd...');
     });
   });
 
-  const androidButtons = document.querySelectorAll('.download-btn-android, .download-link-android, .modal-download-android');
-  androidButtons.forEach((btn) => {
+  document.querySelectorAll('.download-link-android, .store-badge-pill[href*="google"]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      showToast('Connecting to Google Play Store...');
+      showToast('Opening Google Play Store for A’bcd...');
     });
   });
 
-  // 5. Scroll Reveal & Intersection Observer Animations
+  // 10. Scroll Reveal Animations (IntersectionObserver)
   const revealElements = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(
@@ -153,126 +195,47 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
         root: null,
-        threshold: 0.12,
+        threshold: 0.1,
         rootMargin: '0px 0px -40px 0px',
       }
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
   } else {
-    // Fallback if IntersectionObserver not supported
     revealElements.forEach((el) => el.classList.add('active'));
   }
 
-  // 6. Stats Counter Animation
-  const statNumbers = document.querySelectorAll('.stat-number');
-  let hasAnimatedStats = false;
-
-  const animateCounters = () => {
-    if (hasAnimatedStats) return;
-    hasAnimatedStats = true;
-
-    statNumbers.forEach((counter) => {
-      const target = parseFloat(counter.getAttribute('data-target'));
-      const isDecimal = target % 1 !== 0;
-      const duration = 1600; // ms
-      const startTime = performance.now();
-
-      const updateCount = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Easing: easeOutExpo
-        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-        const currentVal = ease * target;
-
-        if (isDecimal) {
-          counter.textContent = currentVal.toFixed(1);
-        } else {
-          counter.textContent = Math.floor(currentVal);
-        }
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.textContent = isDecimal ? target.toFixed(1) : target;
-        }
-      };
-
-      requestAnimationFrame(updateCount);
-    });
-  };
-
-  const statsSection = document.getElementById('stats');
-  if (statsSection && 'IntersectionObserver' in window) {
-    const statsObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    statsObserver.observe(statsSection);
-  }
-
-  // 7. Header Elevation on Scroll
+  // 11. Header Elevation on Scroll
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 25) {
-      header.style.boxShadow = '0 4px 18px rgba(0, 0, 0, 0.08)';
+      header.style.boxShadow = '0 4px 20px rgba(18, 17, 16, 0.08)';
       header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
     } else {
       header.style.boxShadow = 'none';
-      header.style.backgroundColor = 'rgba(255, 255, 255, 0.94)';
+      header.style.backgroundColor = 'rgba(255, 255, 255, 0.96)';
     }
   });
 
-  // 8. Cookie Consent Handling
+  // 12. Cookie Consent Handling
   const cookieConsent = document.getElementById('cookieConsent');
   const cookieAccept = document.getElementById('cookieAccept');
   const cookieDecline = document.getElementById('cookieDecline');
 
-  const cookieChoice = localStorage.getItem('abcd_cookie_consent');
+  const cookieChoice = localStorage.getItem('abcd_community_cookie_consent');
   if (cookieChoice) {
     cookieConsent?.classList.add('hidden');
   }
 
   cookieAccept?.addEventListener('click', () => {
-    localStorage.setItem('abcd_cookie_consent', 'accepted');
+    localStorage.setItem('abcd_community_cookie_consent', 'accepted');
     cookieConsent?.classList.add('hidden');
-    showToast('Preferences saved');
+    showToast('Preferences recorded');
   });
 
   cookieDecline?.addEventListener('click', () => {
-    localStorage.setItem('abcd_cookie_consent', 'declined');
+    localStorage.setItem('abcd_community_cookie_consent', 'declined');
     cookieConsent?.classList.add('hidden');
-    showToast('Preferences saved');
-  });
-
-  // 9. Contact Form Interactive Submission
-  const contactForm = document.getElementById('contactForm');
-  contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Transmitting...';
-
-    setTimeout(() => {
-      btn.textContent = 'Inquiry Sent! ✓';
-      btn.style.backgroundColor = '#16a34a';
-      showToast('Thank you. A’bcd editorial team will connect shortly.');
-
-      setTimeout(() => {
-        contactForm.reset();
-        btn.disabled = false;
-        btn.textContent = originalText;
-        btn.style.backgroundColor = '';
-        closeModal(document.getElementById('contactModal'));
-      }, 1600);
-    }, 700);
+    showToast('Preferences recorded');
   });
 });
