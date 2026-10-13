@@ -194,11 +194,26 @@ button {
   justify-content: space-between;
 }
 
-/* Brand Logotype */
+/* Brand Logotype & Official Brand Logo */
 .brand-logo {
   display: flex;
   align-items: center;
   gap: 16px;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.brand-logo:hover .brand-logo-img {
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
 .brand-logotype {
@@ -1141,6 +1156,26 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.footer-brand-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-logotype {
@@ -2146,6 +2181,16 @@ button {
 
   .brand-subtext {
     display: none;
+  }
+
+  .brand-logo-img {
+    height: 33px;
+    max-width: 135px;
+  }
+
+  .footer-brand-logo-img {
+    height: 42px;
+    max-width: 180px;
   }
 
   .nav-links {
