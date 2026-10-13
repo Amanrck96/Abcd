@@ -202,7 +202,8 @@ button {
   text-decoration: none;
 }
 
-.brand-logo-img {
+.brand-logo-img,
+.logo-img {
   height: 40px;
   width: auto;
   max-width: 175px;
@@ -211,7 +212,8 @@ button {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.brand-logo:hover .brand-logo-img {
+.brand-logo:hover .brand-logo-img,
+.logo:hover .logo-img {
   opacity: 0.88;
   transform: translateY(-1px);
 }
@@ -1169,7 +1171,8 @@ button {
   transform: translateY(-1px);
 }
 
-.footer-brand-logo-img {
+.footer-brand-logo-img,
+.footer-logo-img {
   height: 48px;
   width: auto;
   max-width: 220px;
