@@ -1,636 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="referrer" content="same-origin">
-  <title>A’bcd — all ’bout creativity and designs | A Community Initiative by AAREN INTPRO</title>
-  <meta name="description" content="Where creative minds connect. A’bcd brings architects, interior designers, and the wider design fraternity together to exchange ideas, discover possibilities, and build relationships beyond the drawing board. Initiated by AAREN INTPRO.">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  
-  <!-- Typography: Jost (Modern Architectural Sans) & Cormorant Garamond / Playfair Display (Editorial Serif) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A’bcd — all ’bout creativity and designs | An initiative by AAREN INTPRO</title>
+<meta name="description" content="A’bcd brings architects, interior designers and the wider design fraternity together to exchange ideas and build relationships beyond the drawing board.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Aaren brand colour palette */
+:root{
+  --bronze:#81663F;
+  --ivory:#E6E2D8;
+  --white:#FFFFFF;
+  --black:#000000;
+  --ink-soft:rgba(0,0,0,.74);
+  --rule:rgba(129,102,63,.35);
+  --nav-h:76px;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.01em}
+h1{font-size:clamp(3.1rem,6.2vw,5.4rem)}
+h2{font-size:clamp(2.4rem,4.2vw,3.6rem)}
+h3{font-size:1.7rem;line-height:1.1}
+p{max-width:62ch}
+.intro{color:var(--bronze);font-size:.95rem;font-weight:500;letter-spacing:.02em}
+.body-lg{font-size:1.15rem;color:var(--ink-soft);margin-top:22px}
+.sec{padding:120px 0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 28px;font-weight:500;font-size:.95rem;text-decoration:none;border:1.5px solid var(--bronze);background:var(--bronze);color:var(--white);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#6c5434;border-color:#6c5434}
+.btn.line{background:transparent;color:var(--bronze)}
+.btn.line:hover{background:var(--bronze);color:var(--white)}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);z-index:50}
+header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--serif);font-weight:600;font-size:2rem;letter-spacing:.01em;color:var(--black)}
+.logo small{font-size:.66rem;color:var(--bronze);margin-top:4px;letter-spacing:.02em;font-family:var(--sans)}
+nav ul{list-style:none;display:flex;gap:36px}
+nav a{text-decoration:none;font-size:.95rem;font-weight:400;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+nav a:hover,nav a.active{border-color:var(--bronze);color:var(--bronze)}
+.menu-btn{display:none;background:none;border:1px solid var(--bronze);color:var(--bronze);border-radius:999px;padding:8px 18px;font-size:.9rem;cursor:pointer}
+
+/* hero */
+.hero{padding-top:calc(var(--nav-h) + 96px);padding-bottom:120px}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.hero .body-lg{max-width:52ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.arch{background:var(--bronze);border-radius:260px 260px 18px 18px;overflow:hidden;aspect-ratio:4/5}
+.arch img{width:100%;height:100%;object-fit:cover}
+
+/* feature blocks */
+.panel{background:var(--ivory);border-radius:32px;padding:80px 72px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:72px}
+.feature svg{width:56px;height:56px;stroke:var(--bronze);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:28px}
+.feature h3 .n{color:var(--bronze);font-family:var(--sans);font-size:.95rem;font-weight:500;margin-right:8px;vertical-align:middle}
+.feature p{color:var(--ink-soft);margin-top:14px;font-size:.98rem}
+
+/* large image section */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.story .photo{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--ivory)}
+.story .photo img{width:100%;height:100%;object-fit:cover}
+.story h2{margin-top:18px}
+.story .body-lg+.body-lg{margin-top:16px}
+.story .btn{margin-top:36px}
+
+/* credibility / values */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px}
+.values div{padding:40px 40px 0 0;border-top:1px solid var(--rule)}
+.values div+div{padding-left:40px;border-left:1px solid var(--rule)}
+.values div:last-child{padding-right:0}
+.values p{color:var(--ink-soft);margin-top:14px;font-size:.98rem}
+
+/* app block */
+.app .panel{display:flex;flex-direction:column;gap:48px;min-height:380px;justify-content:space-between}
+.app .stores{display:flex;flex-wrap:wrap;gap:16px}
+.store{display:flex;flex-direction:column;min-width:190px;padding:14px 26px;border-radius:14px;background:var(--black);color:var(--white);text-decoration:none;border:1px solid var(--black);transition:background .2s,color .2s}
+.store:hover{background:var(--white);color:var(--black)}
+.store small{font-size:.75rem;opacity:.8}
+.store b{font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.1}
+
+/* brands carousel */
+.brands{padding-top:0}
+.brands-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:64px;border-top:1px solid var(--rule)}
+.brands-head h2{text-decoration:underline;text-decoration-color:var(--bronze);text-decoration-thickness:1px;text-underline-offset:12px}
+.brands-head span{color:var(--bronze);font-size:1rem}
+.carousel{display:flex;align-items:center;gap:14px;margin-top:48px}
+.arrow{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--bronze);background:transparent;color:var(--bronze);font-size:1.2rem;cursor:pointer;transition:background .2s,color .2s}
+.arrow:hover{background:var(--bronze);color:var(--white)}
+.viewport{overflow:hidden;flex:1;padding:8px 0}
+.track{display:flex;gap:24px;width:max-content;will-change:transform}
+.logo-box{width:170px;height:104px;border-radius:14px;background:var(--ivory);display:grid;place-items:center;color:var(--bronze);font-size:.9rem;overflow:hidden;flex-shrink:0}
+.logo-box img{max-width:78%;max-height:70%;object-fit:contain}
+
+/* final CTA */
+.final{background:var(--bronze);color:var(--white);padding:120px 0}
+.final h2{max-width:18ch}
+.final .body-lg{color:rgba(255,255,255,.9)}
+.final .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.final .btn{background:var(--white);color:var(--bronze);border-color:var(--white)}
+.final .btn:hover{background:var(--ivory);border-color:var(--ivory)}
+.final .btn.line{background:transparent;color:var(--white);border-color:var(--white)}
+.final .btn.line:hover{background:var(--white);color:var(--bronze)}
+.final .initiated{margin-top:48px;font-size:.92rem;color:rgba(255,255,255,.85)}
+
+/* footer */
+footer{padding:56px 0;border-top:1px solid var(--rule);font-size:.92rem;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+footer .brand b{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--black);display:block}
+footer ul{list-style:none;display:flex;gap:28px;flex-wrap:wrap}
+footer button{background:none;border:0;color:inherit;cursor:pointer;padding:0;text-decoration:none}
+footer button:hover{color:var(--bronze);text-decoration:underline}
+
+/* dialogs */
+dialog{border:1px solid var(--rule);border-radius:24px;background:var(--white);color:var(--black);padding:40px;width:min(560px,92vw);max-height:90vh;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog h3{font-size:2rem;margin-bottom:8px}
+dialog h4{font-family:var(--serif);font-size:1.25rem;font-weight:500;margin-top:20px}
+dialog p{margin-top:6px;color:var(--ink-soft);font-size:.98rem}
+dialog .x{position:absolute;top:16px;right:20px;background:none;border:0;color:var(--black);font-size:1.7rem;cursor:pointer;line-height:1}
+form{display:grid;gap:16px;margin-top:22px}
+label{display:grid;gap:6px;font-size:.9rem;font-weight:500}
+input,select,textarea{font:400 1rem var(--sans);padding:11px 14px;border:1px solid var(--rule);border-radius:10px;background:var(--white);color:var(--black)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--bronze);outline-offset:0;border-color:transparent}
+form .btn{justify-self:start;margin-top:4px}
+.ok{display:none;padding:14px 16px;border-radius:10px;background:var(--ivory);color:var(--black);font-size:.95rem}
+
+/* cookie notice */
+#cookie{position:fixed;left:20px;bottom:20px;max-width:440px;background:var(--black);color:var(--white);padding:20px 22px;border-radius:16px;z-index:60;font-size:.9rem;line-height:1.5}
+#cookie .row{display:flex;gap:10px;margin-top:14px}
+#cookie button{border-radius:999px;padding:8px 18px;font-size:.85rem;font-weight:500;cursor:pointer;border:1px solid var(--white);background:transparent;color:var(--white)}
+#cookie button.y{background:var(--white);color:var(--black)}
+
+/* responsive layout */
+@media (max-width:980px){
+  .hero .grid,.story{grid-template-columns:1fr;gap:56px}
+  .arch{max-width:520px}
+  .story .photo{aspect-ratio:4/3}
+  .features{grid-template-columns:1fr;gap:44px}
+  .values{grid-template-columns:1fr}
+  .values div,.values div+div{padding:32px 0 0;border-left:0}
+  .values div+div{margin-top:32px}
+  .panel{padding:56px 36px}
+  nav{display:none}
+  nav.open{display:block;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--white);border-bottom:1px solid var(--rule)}
+  nav.open ul{flex-direction:column;gap:0;padding:8px 28px 18px}
+  nav.open a{display:block;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .menu-btn{display:block}
+  header .join{display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 20px}
+  .sec{padding:88px 0}
+  .hero{padding-bottom:88px}
+  .panel{padding:44px 24px;border-radius:24px}
+  .logo-box{width:130px;height:84px}
+  .arrow{width:40px;height:40px}
+  .store{min-width:0;flex:1}
+}
+@media (max-width:375px){
+  .wrap{padding:0 16px}
+  .btn{padding:12px 20px;font-size:.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar / Initiative Credentials -->
-  <aside class="top-announcement-bar" role="banner">
-    <div class="container announcement-content">
-      <span class="venture-badge">A COMMUNITY INITIATIVE BY AAREN INTPRO</span>
-      <span class="announcement-sep" aria-hidden="true">•</span>
-      <span class="announcement-text">Where creative minds connect across architecture and design</span>
-      <a href="#join-section" class="announcement-link">Become a Member &rarr;</a>
-    </div>
-  </aside>
-
-  <!-- Header / Navigation -->
-  <header class="site-header" id="header">
-    <div class="header-inner container">
-      <a href="index.html" class="brand-logo" aria-label="A'bcd Home">
-        <img src="logo.png" alt="A'bcd — All 'bout creativity & design" class="brand-logo-img" width="165" height="44">
-        <span class="brand-subtext">A community initiative by <strong>AAREN INTPRO</strong></span>
-      </a>
-
-      <nav class="header-nav" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="community.html" class="nav-link">Community</a></li>
-          <li><a href="experiences.html" class="nav-link">Experiences</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="community.html#apply" class="btn btn-nav-cta open-membership-modal" data-source="header-nav">
-            <span>JOIN THE COMMUNITY</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 17l9.2-9.2M17 17V7H7"/>
-            </svg>
-          </a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- 1. Homepage Hero — The First Screen -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <!-- Small introductory text in bronze-gold -->
-          <div class="hero-kicker-wrapper reveal">
-            <span class="kicker-accent-dot" aria-hidden="true"></span>
-            <span class="hero-kicker">A COMMUNITY INITIATIVE BY AAREN INTPRO</span>
-          </div>
-
-          <!-- Headline -->
-          <h1 class="hero-title reveal" style="--delay: 100ms">
-            Where creative minds <br>
-            <span class="hero-title-highlight">connect.</span>
-          </h1>
-
-          <!-- Supporting copy -->
-          <div class="hero-copy-block reveal" style="--delay: 200ms">
-            <p class="hero-lead">
-              The best ideas don't happen in isolation. They happen when creative minds meet, perspectives are shared, and meaningful connections are made.
-            </p>
-            <p class="hero-description">
-              A’bcd brings architects, interior designers, and the wider design fraternity together to exchange ideas, discover possibilities, and build relationships beyond the drawing board.
-            </p>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="hero-actions reveal" style="--delay: 300ms">
-            <a href="#join-section" class="btn btn-primary btn-hero-cta open-membership-modal" id="heroPrimaryBtn" data-source="hero-primary">
-              <span>BECOME A MEMBER</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#community" class="btn btn-outline" id="heroSecondaryBtn">
-              <span>DISCOVER A’BCD</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Platform Synergy Badge (Option B: Broader Design Platform) -->
-          <div class="hero-platform-note reveal" style="--delay: 350ms">
-            <span class="platform-note-label">A Platform for the Design Fraternity:</span>
-            <div class="platform-tags">
-              <span class="platform-tag">Ideas</span>
-              <span class="platform-tag-sep">/</span>
-              <span class="platform-tag">Community</span>
-              <span class="platform-tag-sep">/</span>
-              <span class="platform-tag">Experiences</span>
-              <span class="platform-tag-sep">/</span>
-              <span class="platform-tag">AEC Shorts</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Large Architectural Photograph -->
-        <div class="hero-media reveal" style="--delay: 200ms">
-          <div class="hero-photo-stage">
-            <div class="hero-photo-frame">
-              <img src="hero_collaboration.jpg" alt="Architects and interior designers collaborating in a luminous studio setting" class="hero-editorial-img" loading="eager">
-              <div class="photo-caption-tag">
-                <span class="caption-dot"></span>
-                <span>Design Fraternity • Collaboration beyond the drawing board</span>
-              </div>
-            </div>
-            <!-- Editorial floating badge -->
-            <div class="hero-floating-stat-badge">
-              <span class="floating-badge-eyebrow">INITIATIVE</span>
-              <span class="floating-badge-title">AAREN INTPRO</span>
-              <span class="floating-badge-sub">Propelling Indian & Global Design Minds</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Refined Architectural Marquee Ticker -->
-    <div class="ticker-wrapper" aria-hidden="true">
-      <div class="ticker-track">
-        <span class="ticker-item">WHERE CREATIVE MINDS CONNECT</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">ARCHITECTS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">INTERIOR DESIGNERS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">MATERIAL EXPLORATIONS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">CURATED GATHERINGS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">AAREN INTPRO INITIATIVE</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">DESIGN CONVERSATIONS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">BEYOND THE DRAWING BOARD</span>
-        <span class="ticker-dot">•</span>
-        <!-- Duplicate for continuous loop -->
-        <span class="ticker-item">WHERE CREATIVE MINDS CONNECT</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">ARCHITECTS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">INTERIOR DESIGNERS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">MATERIAL EXPLORATIONS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">CURATED GATHERINGS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">AAREN INTPRO INITIATIVE</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">DESIGN CONVERSATIONS</span>
-        <span class="ticker-dot">•</span>
-        <span class="ticker-item">BEYOND THE DRAWING BOARD</span>
-        <span class="ticker-dot">•</span>
-      </div>
-    </div>
-
-    <!-- 2. The Three Feature Blocks — Replace “Your Personal App” -->
-    <section class="features-section" id="community">
-      <div class="container">
-        <div class="section-header-centered reveal">
-          <span class="sub-heading-pill">THE COMMUNITY EXPERIENCE</span>
-          <h2 class="section-heading">A space for ideas. A community for people.</h2>
-          <p class="section-lead">
-            Good design is a conversation. A’bcd creates opportunities for the people shaping our built environment to connect, exchange ideas, and inspire one another.
-          </p>
-        </div>
-
-        <div class="features-grid">
-          <!-- 01 — Meaningful Connections -->
-          <div class="feature-card reveal" style="--delay: 100ms">
-            <div class="feature-header">
-              <span class="feature-badge">01</span>
-              <!-- Simple line icon: Interconnected circles -->
-              <div class="feature-line-icon" aria-hidden="true">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="9" r="6" />
-                  <circle cx="15" cy="15" r="6" />
-                  <circle cx="15" cy="9" r="2" stroke-width="1.2" opacity="0.6"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="feature-title">Meaningful Connections</h3>
-            <p class="feature-description">
-              Meet the people behind the projects. Build relationships with architects, interior designers, and creative professionals who share your passion for design.
-            </p>
-          </div>
-
-          <!-- 02 — Ideas Worth Sharing -->
-          <div class="feature-card reveal" style="--delay: 200ms">
-            <div class="feature-header">
-              <span class="feature-badge">02</span>
-              <!-- Simple line icon: Dialogue & Idea symbol -->
-              <div class="feature-line-icon" aria-hidden="true">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  <path d="M12 7v3" />
-                  <path d="M12 13h.01" />
-                </svg>
-              </div>
-            </div>
-            <h3 class="feature-title">Ideas Worth Sharing</h3>
-            <p class="feature-description">
-              Discover fresh perspectives, discuss emerging trends, and exchange knowledge that goes beyond conventional networking.
-            </p>
-          </div>
-
-          <!-- 03 — Experiences That Inspire -->
-          <div class="feature-card reveal" style="--delay: 300ms">
-            <div class="feature-header">
-              <span class="feature-badge">03</span>
-              <!-- Simple line icon: Abstract architectural form -->
-              <div class="feature-line-icon" aria-hidden="true">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18" />
-                  <path d="M5 21V9l7-5 7 5v12" />
-                  <path d="M9 21v-7a3 3 0 0 1 6 0v7" />
-                  <line x1="9" y1="9" x2="9.01" y2="9" />
-                  <line x1="15" y1="9" x2="15.01" y2="9" />
-                </svg>
-              </div>
-            </div>
-            <h3 class="feature-title">Experiences That Inspire</h3>
-            <p class="feature-description">
-              Join curated gatherings, design conversations, and material explorations that bring the creative community together.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. The Large Image Section — Replace “Short news for the AEC generation” -->
-    <section class="material-showcase-section" id="experiences">
-      <div class="container material-showcase-container">
-        <!-- Visual: Material Library Collaboration Photograph -->
-        <div class="material-media reveal">
-          <div class="material-image-frame">
-            <img src="material_library.jpg" alt="Designers and architects collaborating around a material library with marble, stone, and wood swatches" class="material-img" loading="lazy">
-            <div class="material-glass-badge">
-              <span class="material-dot"></span>
-              <span>Curated Material Explorations • Studio Gatherings</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content on the side -->
-        <div class="material-content reveal" style="--delay: 150ms">
-          <span class="sub-heading-pill">THE CREATIVE COLLECTIVE</span>
-          <h2 class="editorial-heading">Design is what brings us together.</h2>
-          <p class="material-lead">
-            Behind every remarkable space is a person with an idea.
-          </p>
-          <div class="material-body-text">
-            <p>
-              A’bcd celebrates these people—the architects who imagine, the designers who create, and the creative minds who continually push boundaries.
-            </p>
-            <p>
-              Through conversations, shared experiences, and meaningful relationships, we want to build a community where inspiration travels freely and collaboration comes naturally.
-            </p>
-          </div>
-          <div class="material-action">
-            <a href="#join-section" class="btn btn-primary open-membership-modal" data-source="material-section">
-              <span>EXPLORE OUR COMMUNITY</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. The Credibility Section — Replace “Best in the Business” -->
-    <section class="credibility-section" id="about">
-      <div class="container">
-        <div class="section-header-centered reveal">
-          <span class="sub-heading-pill">CORE VALUES</span>
-          <h2 class="section-heading">A different way to connect.</h2>
-          <p class="section-lead">
-            We believe the design fraternity thrives when connections are authentic, multi-disciplinary, and grounded in mutual respect.
-          </p>
-        </div>
-
-        <div class="credibility-grid">
-          <!-- Block 1: People over Profiles -->
-          <div class="credibility-card reveal" style="--delay: 100ms">
-            <div class="credibility-header">
-              <span class="credibility-tag">FOUNDATIONAL PRINCIPLE</span>
-            </div>
-            <h3 class="credibility-title">People over Profiles</h3>
-            <p class="credibility-description">
-              We believe meaningful relationships begin with genuine conversations, shared interests, and a willingness to learn from one another.
-            </p>
-          </div>
-
-          <!-- Block 2: Design beyond Disciplines -->
-          <div class="credibility-card reveal" style="--delay: 200ms">
-            <div class="credibility-header">
-              <span class="credibility-tag">CROSS-POLLINATION</span>
-            </div>
-            <h3 class="credibility-title">Design beyond Disciplines</h3>
-            <p class="credibility-description">
-              Architecture, interiors, materials, lighting, furniture, and technology intersect. We bring different perspectives into the same conversation.
-            </p>
-          </div>
-
-          <!-- Block 3: Community beyond Business -->
-          <div class="credibility-card reveal" style="--delay: 300ms">
-            <div class="credibility-header">
-              <span class="credibility-tag">AUTHENTIC COLLABORATION</span>
-            </div>
-            <h3 class="credibility-title">Community beyond Business</h3>
-            <p class="credibility-description">
-              Not every interaction needs to become a transaction. We want to create a space where relationships grow naturally and opportunities follow.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Option B: Digital Intelligence Pillar (Preserves App & Shorts access) -->
-    <section class="platform-digital-section" id="digital-access">
-      <div class="container digital-container">
-        <div class="digital-text-column reveal">
-          <span class="sub-heading-pill">DIGITAL INTELLIGENCE PILLAR</span>
-          <h2 class="digital-heading">The Design Platform in Your Pocket.</h2>
-          <p class="digital-copy">
-            Alongside our curated gatherings and community discussions, A’bcd delivers essential AEC intelligence in distilled 60-word briefs. Stay informed between site visits, design charrettes, and client presentations.
-          </p>
-          <div class="digital-badges">
-            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-badge-pill download-link-ios">
-              <svg width="15" height="15" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
-                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 66.7 25.2 121.7c22.6 49.3 55.4 96.6 97.4 96.6 27.6 0 37.6-18.8 71.9-18.8 33.7 0 43.7 18.8 72.8 18.8 41.5 0 74.3-46.3 96.9-95.6 15.6-34.1 22.3-64.4 22.8-66.2-1.7-.8-69.8-27-72.3-61.3zM250.7 93.8c18.5-23.7 30.5-56.7 27-89.8-27.4 1.1-59.5 18.5-78.2 41.7-16.4 20.1-30.8 53-27 84.7 30.5 2.3 60.3-13.6 78.2-36.6z"/>
-              </svg>
-              <span>iOS App Store</span>
-            </a>
-            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="store-badge-pill download-link-android">
-              <svg width="15" height="15" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
-                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9z"/>
-                <path d="M47 38.8c-7.7 9.8-12 23.3-12 39.8v354.8c0 16.5 4.3 30 12 39.8l217-217.2L47 38.8z"/>
-                <path d="M325.3 277.7l60.1 59.9L104.6 499l220.7-221.3z"/>
-                <path d="M465 233.2l-79.6-45.7-60.1 46.8 60.1 46.8 79.6-45.7c15-8.6 24.3-24.5 24.3-42.2.1-17.7-9.3-33.6-24.3-42.2z"/>
-              </svg>
-              <span>Google Play</span>
-            </a>
-          </div>
-        </div>
-        <div class="digital-preview-column reveal" style="--delay: 150ms">
-          <div class="digital-card-preview">
-            <span class="preview-kicker">A’BCD SHORTS</span>
-            <h4>Curated AEC Briefs</h4>
-            <p>Distilled editorial coverage on architecture, interiors, sustainable materials, and zoning innovations across India and the globe.</p>
-            <div class="preview-meta">
-              <span class="preview-badge">60 Words</span>
-              <span class="preview-badge">Zero Fluff</span>
-              <span class="preview-badge">Curated Daily</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. The Final CTA — Replace “Download the easiest way to stay informed” -->
-    <section class="final-cta-section" id="join-section">
-      <div class="container text-center">
-        <div class="final-cta-card reveal">
-          <div class="final-kicker-badge">
-            <span>A COMMUNITY INITIATIVE BY AAREN INTPRO</span>
-          </div>
-
-          <!-- Final CTA Heading -->
-          <h2 class="final-cta-heading">Good things happen when creative minds come together.</h2>
-
-          <!-- Final CTA Supporting Copy -->
-          <div class="final-cta-copy">
-            <p class="final-cta-lead">
-              Be part of a community that values ideas, celebrates design, and believes that the right connections can open up new possibilities.
-            </p>
-            <p class="final-cta-sub">
-              Whether you are an established architect, a young interior designer, or a professional working behind the scenes to shape exceptional spaces, there's a place for you here.
-            </p>
-          </div>
-
-          <!-- Buttons -->
-          <div class="final-cta-buttons">
-            <button type="button" class="btn btn-primary btn-cta-large open-membership-modal" id="finalJoinBtn">
-              <span>JOIN A’BCD</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-            <button type="button" class="btn btn-outline btn-cta-large" id="finalContactBtn">
-              <span>GET IN TOUCH</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </button>
-          </div>
-
-          <!-- Bottom Signature / Initiative Credit -->
-          <div class="final-initiative-note">
-            <span>An initiative by <strong>AAREN INTPRO</strong>.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer with Distinct AAREN INTPRO Credentials -->
-  <footer class="site-footer" id="footer">
-    <div class="container footer-container">
-      <div class="footer-brand-section">
-        <a href="index.html" class="footer-logo-link" aria-label="A'bcd Home">
-          <img src="logo.png" alt="A'bcd — All 'bout creativity & design" class="footer-brand-logo-img" width="188" height="50">
-        </a>
-        <p class="footer-tagline">
-          Discover ideas. Connect with people. Be part of the design conversation.
-        </p>
-        <div class="footer-venture-pill">
-          <span>A Community Initiative by <strong>AAREN INTPRO</strong></span>
-        </div>
-      </div>
-
-      <nav class="footer-navigation" aria-label="Footer Links">
-        <ul class="footer-links">
-          <li><a href="index.html" class="footer-link-btn">Home</a></li>
-          <li><a href="about.html" class="footer-link-btn">About</a></li>
-          <li><a href="community.html" class="footer-link-btn">Community</a></li>
-          <li><a href="experiences.html" class="footer-link-btn">Experiences</a></li>
-          <li><a href="contact.html" class="footer-link-btn">Contact</a></li>
-          <li><button type="button" class="footer-link-btn" id="openTermsModal">Terms & Conditions</button></li>
-          <li><button type="button" class="footer-link-btn" id="openPrivacyModal">Privacy Policy</button></li>
-        </ul>
-      </nav>
-
-      <div class="footer-bottom-row">
-        <div class="footer-copyright">
-          &copy; 2026 A’bcd. All rights reserved. A community initiative by <strong>AAREN INTPRO</strong>.
-        </div>
-        <div class="footer-meta">
-          <span>Architects • Interior Designers • Design Fraternity</span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Cookie Consent Banner -->
-  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-labelledby="cookieHeading">
-    <div class="cookie-container">
-      <div class="cookie-text">
-        <strong id="cookieHeading">Cookie Preferences</strong>
-        <p>We use essential cookies to maintain system performance and anonymized insights for the A’bcd community. By clicking Accept, you support our continuous platform enhancements.</p>
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
-      </div>
+<header>
+  <div class="wrap">
+    <!-- Replace with the real logo file (e.g. images/logo.png) later if provided -->
+    <a class="logo" href="#top" aria-label="A’bcd home">
+      <b>A’bcd</b>
+      <small>all ’bout creativity &amp; design</small>
+    </a>
+    <nav id="nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <button class="btn join" data-open="joinDlg">Join the community</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     </div>
   </div>
+</header>
 
-  <!-- Interactive Toast Notification -->
-  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
-    <div class="toast-icon">✓</div>
-    <div class="toast-message" id="toastMessage">Membership application received.</div>
-  </div>
+<main>
 
-  <!-- MODALS -->
-
-  <!-- 1. Membership Registration Modal ("JOIN THE COMMUNITY" / "BECOME A MEMBER") -->
-  <div class="modal-overlay" id="membershipModal" aria-hidden="true">
-    <div class="modal-box modal-lg" role="dialog" aria-labelledby="membershipModalTitle">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-kicker">AAREN INTPRO COMMUNITY INITIATIVE</div>
-      <h3 id="membershipModalTitle" class="modal-title">Become a Member of A’bcd</h3>
-      <p class="modal-subtitle">
-        Join architects, interior designers, and creative leaders shaping the future of our built environment.
-      </p>
-
-      <form class="membership-form" id="membershipForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="memberName">Full Name</label>
-            <input type="text" id="memberName" required placeholder="Ar. / Id. Your Name">
-          </div>
-          <div class="form-group">
-            <label for="memberEmail">Email Address</label>
-            <input type="email" id="memberEmail" required placeholder="studio@design.com">
-          </div>
+  <!-- 1. HERO -->
+  <section class="hero" id="top">
+    <div class="wrap grid">
+      <div>
+        <p class="intro">A community initiative by AAREN INTPRO</p>
+        <h1 style="margin-top:20px">Where creative minds connect.</h1>
+        <p class="body-lg">The best ideas don’t happen in isolation. They happen when creative minds meet, perspectives are shared, and meaningful connections are made.</p>
+        <p class="body-lg">A’bcd brings architects, interior designers, and the wider design fraternity together to exchange ideas, discover possibilities, and build relationships beyond the drawing board.</p>
+        <div class="actions">
+          <button class="btn" data-open="joinDlg">Become a member</button>
+          <a class="btn line" href="#about">Discover A’bcd</a>
         </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="memberStudio">Studio / Firm / Practice</label>
-            <input type="text" id="memberStudio" required placeholder="e.g. Studio Form & Space">
-          </div>
-          <div class="form-group">
-            <label for="memberDiscipline">Primary Discipline</label>
-            <select id="memberDiscipline" required class="form-select">
-              <option value="" disabled selected>Select Discipline</option>
-              <option value="Architecture">Architecture</option>
-              <option value="Interior Design">Interior Design</option>
-              <option value="Landscape & Urban">Landscape & Urban Planning</option>
-              <option value="Lighting & Materials">Lighting, Materials & Acoustic</option>
-              <option value="Furniture & Industrial">Furniture & Industrial Design</option>
-              <option value="Allied Design Arts">Allied AEC Creative</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="memberCity">City / Region</label>
-            <input type="text" id="memberCity" required placeholder="e.g. Mumbai, New Delhi, Bengaluru...">
-          </div>
-          <div class="form-group">
-            <label for="memberLink">Website or Portfolio (Optional)</label>
-            <input type="url" id="memberLink" placeholder="https://yourportfolio.com">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="memberInterests">What brings you to A’bcd?</label>
-          <textarea id="memberInterests" rows="3" placeholder="Tell us about your creative focus, areas of interest, or what you hope to explore with the community..."></textarea>
-        </div>
-
-        <div class="form-checkbox-row">
-          <input type="checkbox" id="memberNewsletter" checked>
-          <label for="memberNewsletter">Receive invitations to curated gatherings, design conversations, and material explorations.</label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
-          <span>SUBMIT MEMBERSHIP APPLICATION</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
-      </form>
-      <p class="modal-footnote">A’bcd is curated for verified members of the architecture and interior design fraternity. No spam, no marketing noise.</p>
-    </div>
-  </div>
-
-  <!-- 2. Contact Modal ("GET IN TOUCH") -->
-  <div class="modal-overlay" id="contactModal" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-labelledby="contactTitle">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-kicker">AAREN INTPRO INITIATIVE</div>
-      <h3 id="contactTitle" class="modal-title">Connect with A’bcd</h3>
-      <p class="modal-subtitle">Propose a curated gathering, collaborate on material research, or connect with our community team.</p>
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="contactName">Full Name</label>
-          <input type="text" id="contactName" required placeholder="Ar. / Id. Your Name">
-        </div>
-        <div class="form-group">
-          <label for="contactEmail">Email Address</label>
-          <input type="email" id="contactEmail" required placeholder="studio@architecture.com">
-        </div>
-        <div class="form-group">
-          <label for="contactSubject">Inquiry Focus</label>
-          <input type="text" id="contactSubject" required placeholder="Gathering Proposal / Material Library / General Inquiry">
-        </div>
-        <div class="form-group">
-          <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" rows="4" required placeholder="Share your message or collaborative ideas..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- 3. Terms & Conditions Modal -->
-  <div class="modal-overlay" id="termsModal" aria-hidden="true">
-    <div class="modal-box modal-lg" role="dialog" aria-labelledby="termsTitle">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-kicker">COMMUNITY GUIDELINES</div>
-      <h3 id="termsTitle" class="modal-title">Terms & Community Code</h3>
-      <div class="modal-body-scroll">
-        <p><strong>A Community Initiative by AAREN INTPRO • Established 2026</strong></p>
-        <h4>1. The Spirit of A’bcd</h4>
-        <p>A’bcd is dedicated to bringing architects, interior designers, and the wider design fraternity together to exchange ideas, discover possibilities, and build relationships beyond the drawing board. Participation is predicated on mutual professional respect and creative generosity.</p>
-        
-        <h4>2. Community Values: People over Profiles</h4>
-        <p>Members agree to engage in constructive dialogue. We prioritize genuine conversations over transactions, cross-disciplinary exchange over silos, and long-term relationships over aggressive commercial solicitation.</p>
-        
-        <h4>3. Curated Gatherings & Shared Materials</h4>
-        <p>Participation in A’bcd experiences, design dialogues, and material library sessions is hosted under the stewardship of Aaren Intpro. Intellectual property shared in studio sessions remains the property of respective creators.</p>
-        
-        <h4>4. Integrity of Practice</h4>
-        <p>We uphold the highest ethical standards of architectural practice, design authorship, and environmental responsibility across the built environment.</p>
+      </div>
+      <div class="arch">
+        <img src="images/hero-collaboration.jpg" alt="Architects and interior designers collaborating around a table" onerror="this.remove()">
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- 4. Privacy Policy Modal -->
-  <div class="modal-overlay" id="privacyModal" aria-hidden="true">
-    <div class="modal-box modal-lg" role="dialog" aria-labelledby="privacyTitle">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-kicker">DATA PROTECTION & PRIVACY</div>
-      <h3 id="privacyTitle" class="modal-title">Privacy Policy</h3>
-      <div class="modal-body-scroll">
-        <p><strong>Effective Date: 2026 • Aaren Intpro Initiative</strong></p>
-        <h4>1. Information We Collect</h4>
-        <p>When you register for A’bcd membership or attend an experience, we collect professional contact details (name, email, practice/studio, city, discipline). This ensures our community remains tailored to practitioners of architecture and interior design.</p>
-        
-        <h4>2. Respect for Your Privacy</h4>
-        <p>We will never sell or rent your personal contact information to third-party data brokers or commercial advertisers. Your credentials are used exclusively for A’bcd community invitations, curated gatherings, and platform communications.</p>
-        
-        <h4>3. Security & Governance</h4>
-        <p>Under the stewardship of Aaren Intpro, industry-grade security protocols protect member data at all times.</p>
+  <!-- 2. THREE FEATURE BLOCKS -->
+  <section id="about" class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="panel">
+        <h2>A space for ideas. A community for people.</h2>
+        <p class="body-lg" style="max-width:60ch">Good design is a conversation. A’bcd creates opportunities for the people shaping our built environment to connect, exchange ideas, and inspire one another.</p>
+
+        <div class="features">
+          <article class="feature">
+            <!-- Three interconnected circles -->
+            <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="19" cy="28" r="12"/><circle cx="37" cy="28" r="12"/><circle cx="28" cy="14" r="5"/></svg>
+            <h3><span class="n">01 —</span>Meaningful Connections</h3>
+            <p>Meet the people behind the projects. Build relationships with architects, interior designers, and creative professionals who share your passion for design.</p>
+          </article>
+          <article class="feature">
+            <!-- Speech bubble with two dialogue text lines -->
+            <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 12h40a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H26l-9 8v-8H8a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z"/><path d="M16 22h24M16 29h14"/></svg>
+            <h3><span class="n">02 —</span>Ideas Worth Sharing</h3>
+            <p>Discover fresh perspectives, discuss emerging trends, and exchange knowledge that goes beyond conventional networking.</p>
+          </article>
+          <article class="feature">
+            <!-- Architectural arch on a ground line -->
+            <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M12 50V26a16 16 0 0 1 32 0v24"/><path d="M4 50h48M24 50V36h8v14"/></svg>
+            <h3><span class="n">03 —</span>Experiences That Inspire</h3>
+            <p>Join curated gatherings, design conversations, and material explorations that bring the creative community together.</p>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- 3. LARGE IMAGE SECTION -->
+  <section class="sec">
+    <div class="wrap story">
+      <div class="photo">
+        <img src="images/material-library.jpg" alt="Designers gathered around a material library of stone, wood and fabric samples" onerror="this.remove()">
+      </div>
+      <div>
+        <p class="intro">Our community</p>
+        <h2>Design is what brings us together.</h2>
+        <p class="body-lg">Behind every remarkable space is a person with an idea.</p>
+        <p class="body-lg">A’bcd celebrates these people—the architects who imagine, the designers who create, and the creative minds who continually push boundaries.</p>
+        <p class="body-lg">Through conversations, shared experiences, and meaningful relationships, we want to build a community where inspiration travels freely and collaboration comes naturally.</p>
+        <a class="btn" href="#community">Explore our community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CREDIBILITY / VALUES -->
+  <section id="community" class="sec" style="padding-top:0">
+    <div class="wrap">
+      <h2>A different way to connect.</h2>
+      <div class="values">
+        <div>
+          <h3>People over Profiles</h3>
+          <p>We believe meaningful relationships begin with genuine conversations, shared interests, and a willingness to learn from one another.</p>
+        </div>
+        <div>
+          <h3>Design beyond Disciplines</h3>
+          <p>Architecture, interiors, materials, lighting, furniture, and technology intersect. We bring different perspectives into the same conversation.</p>
+        </div>
+        <div>
+          <h3>Community beyond Business</h3>
+          <p>Not every interaction needs to become a transaction. We want to create a space where relationships grow naturally and opportunities follow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. APP BLOCK -->
+  <section id="experiences" class="sec app" style="padding-top:0">
+    <div class="wrap">
+      <div class="panel">
+        <div>
+          <h2>Short-form news for the AEC generation.</h2>
+          <p class="body-lg">Available on iOS and Android.</p>
+        </div>
+        <div class="stores">
+          <!-- Placeholder store URLs. Replace with real app links when live. -->
+          <a class="store" href="https://apps.apple.com" target="_blank" rel="noopener"><small>Download on the</small><b>App Store</b></a>
+          <a class="store" href="https://play.google.com/store" target="_blank" rel="noopener"><small>Get it on</small><b>Google Play</b></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. BRANDS CAROUSEL -->
+  <section id="brands" class="sec brands" style="padding-top:0">
+    <div class="wrap">
+      <div class="brands-head">
+        <h2>Brands</h2>
+        <span>Automobile</span>
+      </div>
+      <div class="carousel">
+        <button class="arrow" id="prev" aria-label="Previous brands">&#8592;</button>
+        <div class="viewport" id="viewport" tabindex="0" aria-label="Brand logos. Use left and right arrow keys to browse.">
+          <div class="track" id="track">
+            <!-- Replace the text in each logo-box with: <img src="images/logo-1.png" alt="Brand name"> -->
+            <div class="logo-box">Brand 1</div>
+            <div class="logo-box">Brand 2</div>
+            <div class="logo-box">Brand 3</div>
+            <div class="logo-box">Brand 4</div>
+            <div class="logo-box">Brand 5</div>
+            <div class="logo-box">Brand 6</div>
+            <div class="logo-box">Brand 7</div>
+          </div>
+        </div>
+        <button class="arrow" id="next" aria-label="Next brands">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FINAL CTA -->
+  <section id="contact" class="final">
+    <div class="wrap">
+      <h2>Your people. Your perspective. Your design community.</h2>
+      <p class="body-lg">Whether you’re an architect, interior designer, creative professional, or someone shaping the future of spaces, there’s a place for you at A’bcd.</p>
+      <p class="body-lg">Come for the conversations. Stay for the connections.</p>
+      <div class="actions">
+        <button class="btn" data-open="joinDlg">Be part of A’bcd</button>
+        <button class="btn line" data-open="contactDlg">Get in touch</button>
+      </div>
+      <p class="initiated">Initiated by AAREN INTPRO</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <b>A’bcd</b>
+      <span>all ’bout creativity and designs</span><br>
+      © 2026 A’bcd. An initiative by AAREN INTPRO.
+    </div>
+    <ul>
+      <li><button data-open="contactDlg">Contact Us</button></li>
+      <li><button data-open="privacyDlg">Privacy Policy</button></li>
+      <li><button data-open="termsDlg">Terms &amp; Conditions</button></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- DIALOGS -->
+<dialog id="joinDlg" aria-labelledby="joinTitle">
+  <button class="x" data-close aria-label="Close" type="button">&times;</button>
+  <h3 id="joinTitle">Become a member</h3>
+  <p>Join architects, interior designers and creative professionals shaping our built environment.</p>
+  <form data-form>
+    <label>Full name<input required name="name" autocomplete="name"></label>
+    <label>Email address<input required type="email" name="email" autocomplete="email"></label>
+    <label>Studio, firm or practice<input name="firm"></label>
+    <label>Discipline
+      <select required name="discipline">
+        <option value="">Select one</option>
+        <option>Architecture</option>
+        <option>Interior design</option>
+        <option>Landscape &amp; urban design</option>
+        <option>Materials, lighting or furniture</option>
+        <option>Other creative profession</option>
+      </select>
+    </label>
+    <label>City<input name="city"></label>
+    <button class="btn" type="submit">Submit application</button>
+    <div class="ok" role="status">Thank you. Your application has been received.</div>
+  </form>
+</dialog>
+
+<dialog id="contactDlg" aria-labelledby="contactTitle">
+  <button class="x" data-close aria-label="Close" type="button">&times;</button>
+  <h3 id="contactTitle">Get in touch</h3>
+  <p>Suggest a gathering, share a material idea, or ask our community team a question.</p>
+  <form data-form>
+    <label>Full name<input required name="name" autocomplete="name"></label>
+    <label>Email address<input required type="email" name="email" autocomplete="email"></label>
+    <label>Message<textarea required rows="4" name="msg"></textarea></label>
+    <button class="btn" type="submit">Send message</button>
+    <div class="ok" role="status">Thank you. We’ll be in touch soon.</div>
+  </form>
+</dialog>
+
+<dialog id="termsDlg" aria-labelledby="termsTitle">
+  <!-- Draft wording. Replace with approved legal text. -->
+  <button class="x" data-close aria-label="Close" type="button">&times;</button>
+  <h3 id="termsTitle">Terms &amp; Conditions</h3>
+  <h4>Community spirit</h4>
+  <p>A’bcd is a space for mutual professional respect. Members engage constructively and keep conversations welcoming.</p>
+  <h4>Shared ideas</h4>
+  <p>Designs and ideas shared in gatherings remain the work of their creators. Please credit them when you refer to them.</p>
+  <h4>Membership</h4>
+  <p>Membership is subject to review. We may decline or end membership where these principles are not upheld.</p>
+</dialog>
+
+<dialog id="privacyDlg" aria-labelledby="privacyTitle">
+  <!-- Draft wording. Replace with approved legal text. -->
+  <button class="x" data-close aria-label="Close" type="button">&times;</button>
+  <h3 id="privacyTitle">Privacy Policy</h3>
+  <h4>What we collect</h4>
+  <p>When you apply to join or get in touch, we collect the details you give us, such as your name, email and discipline.</p>
+  <h4>How we use it</h4>
+  <p>We use your details only to run A’bcd, including invitations to gatherings and community updates. We do not sell your information.</p>
+  <h4>Your choices</h4>
+  <p>You can ask us to update or remove your details at any time by contacting us.</p>
+</dialog>
+
+<!-- COOKIE NOTICE -->
+<div id="cookie" role="region" aria-label="Cookie notice">
+  We use essential cookies to keep this site working, and anonymous insights to improve it.
+  <div class="row">
+    <button class="y" id="ck-yes" type="button">Accept</button>
+    <button id="ck-no" type="button">Decline</button>
+  </div>
+</div>
+
+<script>
+// Mobile navigation menu toggle
+const nav = document.getElementById('nav'), mb = document.getElementById('menuBtn');
+if (mb && nav) {
+  mb.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('open');
+      mb.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// Dialog openers and backdrop handling
+document.querySelectorAll('[data-open]').forEach(b => {
+  b.addEventListener('click', () => {
+    const dlg = document.getElementById(b.dataset.open);
+    if (dlg) {
+      const ok = dlg.querySelector('.ok');
+      if (ok) ok.style.display = 'none';
+      dlg.showModal();
+    }
+  });
+});
+
+document.querySelectorAll('[data-close]').forEach(b => {
+  b.addEventListener('click', () => {
+    const dlg = b.closest('dialog');
+    if (dlg) dlg.close();
+  });
+});
+
+document.querySelectorAll('dialog').forEach(d => {
+  d.addEventListener('click', e => {
+    const rect = d.getBoundingClientRect();
+    const isInDialog = (
+      rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+      rect.left <= e.clientX && e.clientX <= rect.left + rect.width
+    );
+    if (!isInDialog) d.close();
+  });
+});
+
+// Forms submission handling
+document.querySelectorAll('form[data-form]').forEach(f => {
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    // TODO: Connect this form handler to your production API / CRM endpoint
+    const ok = f.querySelector('.ok');
+    if (ok) ok.style.display = 'block';
+    f.reset();
+  });
+});
+
+// Highlight the active navigation link for the section in view
+const links = [...(nav ? nav.querySelectorAll('a') : [])];
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      links.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+
+document.querySelectorAll('section[id]').forEach(s => io.observe(s));
+
+// Cookie notice banner
+const ck = document.getElementById('cookie');
+if (ck) {
+  try {
+    if (localStorage.getItem('abcd-cookie')) ck.remove();
+  } catch (e) {}
+
+  ['ck-yes', 'ck-no'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener('click', () => {
+        try { localStorage.setItem('abcd-cookie', id); } catch (e) {}
+        ck.remove();
+      });
+    }
+  });
+}
+
+// Brands carousel: slow automatic loop, pauses on hover/focus, arrows move it manually
+(() => {
+  const vp = document.getElementById('viewport');
+  const tr = document.getElementById('track');
+  if (!vp || !tr) return;
+
+  const originals = [...tr.children];
+  if (!originals.length) return;
+
+  // Repeat the logos until the track is long enough for a seamless loop
+  const minRequiredWidth = Math.max(window.innerWidth * 2, 1600) + 400;
+  while (tr.scrollWidth < minRequiredWidth) {
+    originals.forEach(n => tr.appendChild(n.cloneNode(true)));
+  }
+
+  const gap = 24;
+  const stepW = () => (originals[0] ? originals[0].offsetWidth + gap : 194);
+  const loopW = () => stepW() * originals.length;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let pos = 0;
+  let paused = false;
+  let last = 0;
+  let isAnimating = false;
+
+  const draw = () => {
+    const L = loopW();
+    if (L <= 0) return;
+    pos = ((pos % L) + L) % L;
+    tr.style.transform = `translateX(${-pos}px)`;
+  };
+
+  const tick = t => {
+    if (!last) last = t;
+    const dt = t - last;
+    last = t;
+    if (!paused && !prefersReduced && !isAnimating) {
+      pos += dt * 0.035;
+      draw();
+    }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  const move = dir => {
+    paused = true;
+    isAnimating = true;
+    const from = pos;
+    const to = pos + dir * stepW();
+    const t0 = performance.now();
+
+    const ease = n => {
+      const k = Math.min(1, (n - t0) / 450);
+      const e = 1 - Math.pow(1 - k, 3);
+      pos = from + (to - from) * e;
+      draw();
+      if (k < 1) {
+        requestAnimationFrame(ease);
+      } else {
+        isAnimating = false;
+        setTimeout(() => {
+          paused = false;
+        }, 1500);
+      }
+    };
+    requestAnimationFrame(ease);
+  };
+
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  if (nextBtn) nextBtn.addEventListener('click', () => move(1));
+  if (prevBtn) prevBtn.addEventListener('click', () => move(-1));
+
+  vp.addEventListener('mouseenter', () => { paused = true; });
+  vp.addEventListener('mouseleave', () => { if (!isAnimating) paused = false; });
+  vp.addEventListener('focus', () => { paused = true; });
+  vp.addEventListener('blur', () => { if (!isAnimating) paused = false; });
+
+  vp.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      move(1);
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      move(-1);
+    }
+  });
+})();
+</script>
 </body>
 </html>
