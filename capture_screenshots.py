@@ -23,14 +23,14 @@ with sync_playwright() as p:
 
     # 2. Tablet Viewport (820x1180)
     page.set_viewport_size({'width': 820, 'height': 1180})
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(400)
     page.screenshot(path=os.path.join(output_dir, 'tablet_hero.png'), full_page=False)
     page.screenshot(path=os.path.join(output_dir, 'tablet_full.png'), full_page=True)
     print('Captured tablet screenshots!')
 
     # 3. Mobile Viewport (390x844 - iPhone)
     page.set_viewport_size({'width': 390, 'height': 844})
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(400)
     page.screenshot(path=os.path.join(output_dir, 'mobile_hero.png'), full_page=False)
     page.screenshot(path=os.path.join(output_dir, 'mobile_full.png'), full_page=True)
     print('Captured mobile screenshots!')
@@ -61,9 +61,14 @@ with sync_playwright() as p:
     short_btn = page.query_selector('[data-read-short]')
     if short_btn:
         short_btn.click()
-        page.wait_for_timeout(500)
+        page.wait_for_timeout(400)
         page.screenshot(path=os.path.join(output_dir, 'reader_modal_open.png'))
         print('Captured reader modal screenshot!')
+        # Close the modal
+        close_btn = page.query_selector('#cardDetailDlg [data-close]')
+        if close_btn:
+            close_btn.click()
+            page.wait_for_timeout(300)
 
     browser.close()
 
