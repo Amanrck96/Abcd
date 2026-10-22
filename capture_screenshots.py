@@ -58,17 +58,25 @@ with sync_playwright() as p:
         print('Captured phone card switched screenshot!')
 
     # Click "Read 60-word Short"
-    short_btn = page.query_selector('[data-read-short]')
-    if short_btn:
-        short_btn.click()
-        page.wait_for_timeout(400)
-        page.screenshot(path=os.path.join(output_dir, 'reader_modal_open.png'))
-        print('Captured reader modal screenshot!')
-        # Close the modal
-        close_btn = page.query_selector('#cardDetailDlg [data-close]')
-        if close_btn:
-            close_btn.click()
-            page.wait_for_timeout(300)
+    try:
+        # Check if modal is already open
+        open_dlg = page.query_selector('dialog[open]')
+        if open_dlg:
+            page.evaluate('document.querySelectorAll("dialog[open]").forEach(d => d.close())')
+            page.wait_for_timeout(200)
+
+        short_btn = page.query_selector('[data-read-short]')
+        if short_btn:
+            short_btn.click(timeout=3000)
+            page.wait_for_timeout(400)
+            page.screenshot(path=os.path.join(output_dir, 'reader_modal_open.png'))
+            print('Captured reader modal screenshot!')
+            close_btn = page.query_selector('#cardDetailDlg [data-close]')
+            if close_btn:
+                close_btn.click()
+                page.wait_for_timeout(300)
+    except Exception as e:
+        print('Modal test warning (non-fatal):', e)
 
     browser.close()
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" fill="currentColor">
+  <g transform="translate(0, 4)">
+    <text x="0" y="23" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5px">Hettich</text>
+    <!-- Characteristic Hettich quad-color graphic mark -->
+    <g transform="translate(108, 2)">
+      <polygon points="0,6 16,15 16,18 0,9" fill="#e30613" />
+      <polygon points="0,10 16,19 16,22 0,13" fill="#f9b000" />
+      <polygon points="0,14 16,23 16,26 0,17" fill="#00975f" />
+      <polygon points="0,18 16,27 16,30 0,21" fill="#00569d" />
+    </g>
+  </g>
+</svg>
