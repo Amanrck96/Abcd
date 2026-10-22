@@ -1,627 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A’bcd — all ’bout creativity and designs | An initiative by AAREN INTPRO</title>
-<meta name="description" content="A’bcd brings architects, interior designers and the wider design fraternity together to exchange ideas and build relationships beyond the drawing board.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-/* Aaren brand colour palette */
-:root{
-  --bronze:#81663F;
-  --ivory:#E6E2D8;
-  --white:#FFFFFF;
-  --black:#000000;
-  --ink-soft:rgba(0,0,0,.74);
-  --rule:rgba(129,102,63,.35);
-  --nav-h:76px;
-  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-  --sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
-body{font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit}
-button{font:inherit}
-:focus-visible{outline:2px solid var(--bronze);outline-offset:4px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.01em}
-h1{font-size:clamp(3.1rem,6.2vw,5.4rem)}
-h2{font-size:clamp(2.4rem,4.2vw,3.6rem)}
-h3{font-size:1.7rem;line-height:1.1}
-p{max-width:62ch}
-.intro{color:var(--bronze);font-size:.95rem;font-weight:500;letter-spacing:.02em}
-.body-lg{font-size:1.15rem;color:var(--ink-soft);margin-top:22px}
-.sec{padding:120px 0}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A’bcd — all ’bout creativity &amp; design | An initiative by AAREN INTPRO</title>
+  <meta name="description" content="A’bcd brings architects, interior designers, and the wider creative fraternity together to discover curated 60-word design intelligence, inspirations, events, architectural travel, and networking.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 28px;font-weight:500;font-size:.95rem;text-decoration:none;border:1.5px solid var(--bronze);background:var(--bronze);color:var(--white);cursor:pointer;transition:background .2s,color .2s}
-.btn:hover{background:#6c5434;border-color:#6c5434}
-.btn.line{background:transparent;color:var(--bronze)}
-.btn.line:hover{background:var(--bronze);color:var(--white)}
+  <!-- Google Fonts: Jost (Contemporary Sans) & Cormorant Garamond (Editorial Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* header */
-header{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);z-index:50}
-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{text-decoration:none;display:inline-flex;align-items:center;line-height:1;transition:opacity .2s ease}
-.logo:hover{opacity:.85}
-.logo-img{height:44px;width:auto;max-width:185px;object-fit:contain;display:block}
-nav ul{list-style:none;display:flex;gap:36px}
-nav a{text-decoration:none;font-size:.95rem;font-weight:400;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
-nav a:hover,nav a.active{border-color:var(--bronze);color:var(--bronze)}
-.menu-btn{display:none;background:none;border:1px solid var(--bronze);color:var(--bronze);border-radius:999px;padding:8px 18px;font-size:.9rem;cursor:pointer}
-
-/* hero */
-.hero{padding-top:calc(var(--nav-h) + 96px);padding-bottom:120px}
-.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
-.hero .body-lg{max-width:52ch}
-.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
-.arch{background:var(--bronze);border-radius:260px 260px 18px 18px;overflow:hidden;aspect-ratio:4/5}
-.arch img{width:100%;height:100%;object-fit:cover}
-
-/* feature blocks */
-.panel{background:var(--ivory);border-radius:32px;padding:80px 72px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:72px}
-.feature svg{width:56px;height:56px;stroke:var(--bronze);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:28px}
-.feature h3 .n{color:var(--bronze);font-family:var(--sans);font-size:.95rem;font-weight:500;margin-right:8px;vertical-align:middle}
-.feature p{color:var(--ink-soft);margin-top:14px;font-size:.98rem}
-
-/* large image section */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
-.story .photo{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--ivory)}
-.story .photo img{width:100%;height:100%;object-fit:cover}
-.story h2{margin-top:18px}
-.story .body-lg+.body-lg{margin-top:16px}
-.story .btn{margin-top:36px}
-
-/* credibility / values */
-.values{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px}
-.values div{padding:40px 40px 0 0;border-top:1px solid var(--rule)}
-.values div+div{padding-left:40px;border-left:1px solid var(--rule)}
-.values div:last-child{padding-right:0}
-.values p{color:var(--ink-soft);margin-top:14px;font-size:.98rem}
-
-/* app block */
-.app .panel{display:flex;flex-direction:column;gap:48px;min-height:380px;justify-content:space-between}
-.app .stores{display:flex;flex-wrap:wrap;gap:16px}
-.store{display:flex;flex-direction:column;min-width:190px;padding:14px 26px;border-radius:14px;background:var(--black);color:var(--white);text-decoration:none;border:1px solid var(--black);transition:background .2s,color .2s}
-.store:hover{background:var(--white);color:var(--black)}
-.store small{font-size:.75rem;opacity:.8}
-.store b{font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.1}
-
-/* brands carousel */
-.brands{padding-top:0}
-.brands-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:64px;border-top:1px solid var(--rule)}
-.brands-head h2{text-decoration:underline;text-decoration-color:var(--bronze);text-decoration-thickness:1px;text-underline-offset:12px}
-.brands-head span{color:var(--bronze);font-size:1rem}
-.carousel{display:flex;align-items:center;gap:14px;margin-top:48px}
-.arrow{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--bronze);background:transparent;color:var(--bronze);font-size:1.2rem;cursor:pointer;transition:background .2s,color .2s}
-.arrow:hover{background:var(--bronze);color:var(--white)}
-.viewport{overflow:hidden;flex:1;padding:8px 0}
-.track{display:flex;gap:24px;width:max-content;will-change:transform}
-.logo-box{width:170px;height:104px;border-radius:14px;background:var(--ivory);display:grid;place-items:center;color:var(--bronze);font-size:.9rem;overflow:hidden;flex-shrink:0}
-.logo-box img{max-width:78%;max-height:70%;object-fit:contain}
-
-/* final CTA */
-.final{background:var(--bronze);color:var(--white);padding:120px 0}
-.final h2{max-width:18ch}
-.final .body-lg{color:rgba(255,255,255,.9)}
-.final .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
-.final .btn{background:var(--white);color:var(--bronze);border-color:var(--white)}
-.final .btn:hover{background:var(--ivory);border-color:var(--ivory)}
-.final .btn.line{background:transparent;color:var(--white);border-color:var(--white)}
-.final .btn.line:hover{background:var(--white);color:var(--bronze)}
-.final .initiated{margin-top:48px;font-size:.92rem;color:rgba(255,255,255,.85)}
-
-/* footer */
-footer{padding:56px 0;border-top:1px solid var(--rule);font-size:.92rem;color:var(--ink-soft)}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
-footer .brand{display:flex;flex-direction:column;gap:10px}
-footer .footer-logo{display:inline-block;text-decoration:none;transition:opacity .2s ease}
-footer .footer-logo:hover{opacity:.85}
-footer .footer-logo-img{height:38px;width:auto;max-width:160px;object-fit:contain;display:block}
-footer .footer-copy{margin:0;font-size:.88rem;color:var(--ink-soft)}
-footer ul{list-style:none;display:flex;gap:28px;flex-wrap:wrap}
-footer button{background:none;border:0;color:inherit;cursor:pointer;padding:0;text-decoration:none}
-footer button:hover{color:var(--bronze);text-decoration:underline}
-
-/* dialogs */
-dialog{border:1px solid var(--rule);border-radius:24px;background:var(--white);color:var(--black);padding:40px;width:min(560px,92vw);max-height:90vh;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0}
-dialog::backdrop{background:rgba(0,0,0,.45)}
-dialog h3{font-size:2rem;margin-bottom:8px}
-dialog h4{font-family:var(--serif);font-size:1.25rem;font-weight:500;margin-top:20px}
-dialog p{margin-top:6px;color:var(--ink-soft);font-size:.98rem}
-dialog .x{position:absolute;top:16px;right:20px;background:none;border:0;color:var(--black);font-size:1.7rem;cursor:pointer;line-height:1}
-form{display:grid;gap:16px;margin-top:22px}
-label{display:grid;gap:6px;font-size:.9rem;font-weight:500}
-input,select,textarea{font:400 1rem var(--sans);padding:11px 14px;border:1px solid var(--rule);border-radius:10px;background:var(--white);color:var(--black)}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--bronze);outline-offset:0;border-color:transparent}
-form .btn{justify-self:start;margin-top:4px}
-.ok{display:none;padding:14px 16px;border-radius:10px;background:var(--ivory);color:var(--black);font-size:.95rem}
-
-/* cookie notice */
-#cookie{position:fixed;right:24px;bottom:24px;max-width:420px;background:var(--black);color:var(--white);padding:20px 22px;border-radius:16px;z-index:60;font-size:.9rem;line-height:1.5;box-shadow:0 12px 36px rgba(0,0,0,.25)}
-#cookie .row{display:flex;gap:10px;margin-top:14px}
-#cookie button{border-radius:999px;padding:8px 18px;font-size:.85rem;font-weight:500;cursor:pointer;border:1px solid var(--white);background:transparent;color:var(--white)}
-#cookie button.y{background:var(--white);color:var(--black)}
-
-/* responsive layout */
-@media (max-width:980px){
-  .hero .grid,.story{grid-template-columns:1fr;gap:56px}
-  .arch{max-width:520px}
-  .story .photo{aspect-ratio:4/3}
-  .features{grid-template-columns:1fr;gap:44px}
-  .values{grid-template-columns:1fr}
-  .values div,.values div+div{padding:32px 0 0;border-left:0}
-  .values div+div{margin-top:32px}
-  .panel{padding:56px 36px}
-  nav{display:none}
-  nav.open{display:block;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--white);border-bottom:1px solid var(--rule)}
-  nav.open ul{flex-direction:column;gap:0;padding:8px 28px 18px}
-  nav.open a{display:block;padding:14px 0;border-bottom:1px solid var(--rule)}
-  .menu-btn{display:block}
-  header .join{display:none}
-}
-@media (max-width:600px){
-  .wrap{padding:0 20px}
-  .sec{padding:88px 0}
-  .hero{padding-bottom:88px}
-  .panel{padding:44px 24px;border-radius:24px}
-  .logo-img{height:34px;max-width:145px}
-  .logo-box{width:130px;height:84px}
-  .arrow{width:40px;height:40px}
-  .store{min-width:0;flex:1}
-  #cookie{left:16px;right:16px;bottom:16px;max-width:none}
-}
-@media (max-width:375px){
-  .wrap{padding:0 16px}
-  .btn{padding:12px 20px;font-size:.9rem}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
-</style>
+  <!-- Main Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <a class="logo" href="#top" aria-label="A’bcd home">
-      <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="logo-img" width="165" height="44">
-    </a>
-    <nav id="nav" aria-label="Main Navigation">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#experiences">Experiences</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div style="display:flex;gap:12px;align-items:center">
-      <button class="btn join" data-open="joinDlg">Join the community</button>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
-    </div>
-  </div>
-</header>
+  <!-- ==========================================================================
+       Sticky Header with Presentation Branding & 4 Main Navigation Categories
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- ABCD Wordmark & Tagline -->
+      <a href="#hero" class="brand-link" aria-label="A’bcd — All ’bout creativity &amp; design Home">
+        <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="brand-logo-image" width="165" height="44">
+      </a>
 
-<main>
+      <!-- 4 Core Navigation Categories from Presentation -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#inspirations" class="nav-link">Inspirations + References</a></li>
+          <li><a href="#events" class="nav-link">Events</a></li>
+          <li><a href="#travel" class="nav-link">Architectural Travel</a></li>
+          <li><a href="#networking" class="nav-link">Networking</a></li>
+        </ul>
+      </nav>
 
-  <!-- 1. HERO -->
-  <section class="hero" id="top">
-    <div class="wrap grid">
-      <div>
-        <p class="intro">A community initiative by AAREN INTPRO</p>
-        <h1 style="margin-top:20px">Where creative minds connect.</h1>
-        <p class="body-lg">The best ideas don’t happen in isolation. They happen when creative minds meet, perspectives are shared, and meaningful connections are made.</p>
-        <p class="body-lg">A’bcd brings architects, interior designers, and the wider design fraternity together to exchange ideas, discover possibilities, and build relationships beyond the drawing board.</p>
-        <div class="actions">
-          <button class="btn" data-open="joinDlg">Become a member</button>
-          <a class="btn line" href="#about">Discover A’bcd</a>
-        </div>
-      </div>
-      <div class="arch">
-        <img src="images/hero-collaboration.jpg" alt="Architects and interior designers collaborating around a table" onerror="this.remove()">
+      <!-- Action Button & Mobile Drawer Toggle -->
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm" data-open="joinDlg">Become a member</button>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- 2. THREE FEATURE BLOCKS -->
-  <section id="about" class="sec" style="padding-top:0">
-    <div class="wrap">
-      <div class="panel">
-        <h2>A space for ideas. A community for people.</h2>
-        <p class="body-lg" style="max-width:60ch">Good design is a conversation. A’bcd creates opportunities for the people shaping our built environment to connect, exchange ideas, and inspire one another.</p>
+  <main>
+    <!-- ==========================================================================
+         Hero Section (Slide 1 & 2 Composition): 60-Word Card Phone Mockup + Editorial
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <!-- Left: Interactive Smartphone Mockup showing 60-word Short Card -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <!-- Mobile Status Bar -->
+              <div class="phone-status-bar">
+                <span>5:43</span>
+                <div class="phone-status-icons">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 24 16" fill="currentColor"><rect x="1" y="2" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="4" y="5" width="10" height="6" fill="currentColor"/><path d="M21 6v4" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+              </div>
 
-        <div class="features">
-          <article class="feature">
-            <!-- Three interconnected circles -->
-            <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="19" cy="28" r="12"/><circle cx="37" cy="28" r="12"/><circle cx="28" cy="14" r="5"/></svg>
-            <h3><span class="n">01 —</span>Meaningful Connections</h3>
-            <p>Meet the people behind the projects. Build relationships with architects, interior designers, and creative professionals who share your passion for design.</p>
-          </article>
-          <article class="feature">
-            <!-- Speech bubble with two dialogue text lines -->
-            <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 12h40a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3H26l-9 8v-8H8a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z"/><path d="M16 22h24M16 29h14"/></svg>
-            <h3><span class="n">02 —</span>Ideas Worth Sharing</h3>
-            <p>Discover fresh perspectives, discuss emerging trends, and exchange knowledge that goes beyond conventional networking.</p>
-          </article>
-          <article class="feature">
-            <!-- Architectural arch on a ground line -->
-            <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M12 50V26a16 16 0 0 1 32 0v24"/><path d="M4 50h48M24 50V36h8v14"/></svg>
-            <h3><span class="n">03 —</span>Experiences That Inspire</h3>
-            <p>Join curated gatherings, design conversations, and material explorations that bring the creative community together.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. LARGE IMAGE SECTION -->
-  <section class="sec">
-    <div class="wrap story">
-      <div class="photo">
-        <img src="images/material-library.jpg" alt="Designers gathered around a material library of stone, wood and fabric samples" onerror="this.remove()">
-      </div>
-      <div>
-        <p class="intro">Our community</p>
-        <h2>Design is what brings us together.</h2>
-        <p class="body-lg">Behind every remarkable space is a person with an idea.</p>
-        <p class="body-lg">A’bcd celebrates these people—the architects who imagine, the designers who create, and the creative minds who continually push boundaries.</p>
-        <p class="body-lg">Through conversations, shared experiences, and meaningful relationships, we want to build a community where inspiration travels freely and collaboration comes naturally.</p>
-        <a class="btn" href="#community">Explore our community</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. CREDIBILITY / VALUES -->
-  <section id="community" class="sec" style="padding-top:0">
-    <div class="wrap">
-      <h2>A different way to connect.</h2>
-      <div class="values">
-        <div>
-          <h3>People over Profiles</h3>
-          <p>We believe meaningful relationships begin with genuine conversations, shared interests, and a willingness to learn from one another.</p>
-        </div>
-        <div>
-          <h3>Design beyond Disciplines</h3>
-          <p>Architecture, interiors, materials, lighting, furniture, and technology intersect. We bring different perspectives into the same conversation.</p>
-        </div>
-        <div>
-          <h3>Community beyond Business</h3>
-          <p>Not every interaction needs to become a transaction. We want to create a space where relationships grow naturally and opportunities follow.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. APP BLOCK -->
-  <section id="experiences" class="sec app" style="padding-top:0">
-    <div class="wrap">
-      <div class="panel">
-        <div>
-          <h2>Short-form news for the AEC generation.</h2>
-          <p class="body-lg">Available on iOS and Android.</p>
-        </div>
-        <div class="stores">
-          <!-- Placeholder store URLs. Replace with real app links when live. -->
-          <a class="store" href="https://apps.apple.com" target="_blank" rel="noopener"><small>Download on the</small><b>App Store</b></a>
-          <a class="store" href="https://play.google.com/store" target="_blank" rel="noopener"><small>Get it on</small><b>Google Play</b></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. BRANDS CAROUSEL -->
-  <section id="brands" class="sec brands" style="padding-top:0">
-    <div class="wrap">
-      <div class="brands-head">
-        <h2>Brands</h2>
-      </div>
-      <div class="carousel">
-        <button class="arrow" id="prev" aria-label="Previous brands">&#8592;</button>
-        <div class="viewport" id="viewport" tabindex="0" aria-label="Brand logos. Use left and right arrow keys to browse.">
-          <div class="track" id="track">
-            <!-- Replace the text in each logo-box with: <img src="images/logo-1.png" alt="Brand name"> -->
-            <div class="logo-box">Brand 1</div>
-            <div class="logo-box">Brand 2</div>
-            <div class="logo-box">Brand 3</div>
-            <div class="logo-box">Brand 4</div>
-            <div class="logo-box">Brand 5</div>
-            <div class="logo-box">Brand 6</div>
-            <div class="logo-box">Brand 7</div>
+              <!-- Live Card Container -->
+              <div class="phone-card" id="phoneLiveCard" title="Tap to read full piece">
+                <div class="phone-card-media">
+                  <img src="images/material-library.jpg" alt="Architecture card" class="phone-card-img" id="phoneCardImg">
+                  <span class="phone-card-badge" id="phoneCardBadge">Inspirations + References</span>
+                </div>
+                <div class="phone-card-body">
+                  <div>
+                    <h4 class="phone-card-headline" id="phoneCardHeadline">The Poetics of Monolithic Concrete: Purity in Spatial Form</h4>
+                    <p class="phone-card-text" id="phoneCardText">Behind every remarkable structure is a person with an idea. Raw board-formed concrete, dramatic natural lightwells, and quiet minimalist proportions redefine contemplative spaces for the contemporary era.</p>
+                    <p class="phone-card-meta" id="phoneCardMeta">60 words • Curated by A'bcd Studio</p>
+                  </div>
+                  <div class="phone-card-footer">
+                    <span class="phone-tap-prompt">Tap to read full short &rarr;</span>
+                    <div class="phone-swipe-indicator">
+                      <span class="phone-dot active" data-index="0"></span>
+                      <span class="phone-dot" data-index="1"></span>
+                      <span class="phone-dot" data-index="2"></span>
+                      <span class="phone-dot" data-index="3"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="arrow" id="next" aria-label="Next brands">&#8594;</button>
+
+        <!-- Right: Editorial Presentation Copy & Official Store Badges -->
+        <div class="hero-copy">
+          <p class="hero-initiative">An initiative by AAREN INTPRO • All ’bout creativity &amp; design</p>
+          <h1 class="display-title hero-title">Stay informed in 60 words.</h1>
+          <p class="lead-body hero-description">
+            We understand you don’t have time to go through long news articles every day. So we cut the clutter and deliver them in 60-word shorts. Short news for the mobile generation of architects, designers, and creative minds.
+          </p>
+
+          <!-- Presentation App Badges -->
+          <div class="store-badges">
+            <!-- App Store Badge -->
+            <a href="https://apps.apple.com" target="_blank" rel="noopener" class="store-badge" aria-label="Download on the App Store">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2.02.6-2.66 1.34-.56.64-1.05 1.71-.92 2.74 1.01.08 2.05-.46 2.66-1.21z"/>
+              </svg>
+              <div class="store-badge-text">
+                <span class="caption">Download on the</span>
+                <span class="store-name">App Store</span>
+              </div>
+            </a>
+
+            <!-- Google Play Badge -->
+            <a href="https://play.google.com/store" target="_blank" rel="noopener" class="store-badge" aria-label="Get it on Google Play">
+              <svg width="22" height="24" viewBox="0 0 24 24">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.367-.61-.91-.61-1.554V3.368c0-.644.24-1.187.61-1.554zm11.24 11.243l2.25 2.25-10.742 6.138 8.492-8.388zm0-2.114L6.357 2.555l10.742 6.138-2.25 2.25zm1.536 1.057l3.666 2.095c.87.498.87 1.314 0 1.812l-3.666 2.095-2.023-2.023 2.023-1.979z"/>
+              </svg>
+              <div class="store-badge-text">
+                <span class="caption">GET IT ON</span>
+                <span class="store-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Secondary Actions -->
+          <div class="hero-cta-group">
+            <button class="btn btn-primary" data-open="joinDlg">Become a member</button>
+            <a href="#inspirations" class="btn btn-outline">Explore Inspirations</a>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 7. FINAL CTA -->
-  <section id="contact" class="final">
-    <div class="wrap">
-      <h2>Your people. Your perspective. Your design community.</h2>
-      <p class="body-lg">Whether you’re an architect, interior designer, creative professional, or someone shaping the future of spaces, there’s a place for you at A’bcd.</p>
-      <p class="body-lg">Come for the conversations. Stay for the connections.</p>
-      <div class="actions">
-        <button class="btn" data-open="joinDlg">Be part of A’bcd</button>
-        <button class="btn line" data-open="contactDlg">Get in touch</button>
+    <hr class="section-divider">
+
+    <!-- ==========================================================================
+         Section 1: INSPIRATIONS + REFERENCES (Slide 2 Exact)
+         ========================================================================== -->
+    <section class="section-spacing" id="inspirations">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <span class="category-eyebrow">01 / Visual Archive &amp; Design Intelligence</span>
+            <h2 class="section-title">Inspirations + References</h2>
+          </div>
+          <p class="lead-body">
+            An editorial discovery experience for architecture, design inspiration, creative references, and material collections—condensed into 60-word briefs.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" role="tablist" aria-label="Inspirations Filter">
+          <button class="filter-btn active" data-filter="all">All Collections</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+          <button class="filter-btn" data-filter="interiors">Interiors</button>
+          <button class="filter-btn" data-filter="materiality">Materiality</button>
+          <button class="filter-btn" data-filter="spatial">Spatial Art</button>
+        </div>
+
+        <!-- Grid of 6 Editorial Cards -->
+        <div class="inspirations-grid">
+          
+          <!-- Card 1 -->
+          <article class="card-item" data-category="architecture">
+            <div class="card-media">
+              <img src="images/material-library.jpg" alt="Monolithic Concrete" loading="lazy">
+              <span class="card-tag">Architecture</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0821</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">The Poetics of Monolithic Concrete</h3>
+              <p class="card-excerpt">
+                Raw board-formed concrete, dramatic natural lightwells, and quiet minimalist proportions redefine contemplative spaces for the contemporary era. Purity in spatial volume allows light to become the primary material.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card-item" data-category="architecture">
+            <div class="card-media">
+              <img src="images/travel_kyoto.jpg" alt="Kyoto Zen Pavilions" loading="lazy">
+              <span class="card-tag">Architecture</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0822</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">Kyoto Pavilion Studies &amp; Zen Geometry</h3>
+              <p class="card-excerpt">
+                Traditional Japanese cedar joinery seamlessly meets modernist cantilevered glass. Water courtyards act as acoustic buffers, merging indoor tatami serenity with outdoor natural reflection.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card-item" data-category="interiors">
+            <div class="card-media">
+              <img src="about_vision.jpg" alt="Studio Practice" loading="lazy">
+              <span class="card-tag">Interiors</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0823</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">Studio Practice &amp; Collaborative Blueprints</h3>
+              <p class="card-excerpt">
+                Behind every remarkable space is a person with an idea. Exploring the tactile translation from hand-drawn scale drawings and basswood scale models into physical built environments.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card-item" data-category="materiality">
+            <div class="card-media">
+              <img src="hero_collaboration.jpg" alt="Material Tactility" loading="lazy">
+              <span class="card-tag">Materiality</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0824</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">Material Tactility: Patinated Brass &amp; Limestone</h3>
+              <p class="card-excerpt">
+                Investigating sensory durability across natural stone, fluted oak panels, and unlacquered brass hardware that ages gracefully with touch and atmospheric patina over decades of occupancy.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card-item" data-category="architecture">
+            <div class="card-media">
+              <img src="images/travel_nordic.jpg" alt="Nordic Waterfront Urbanism" loading="lazy">
+              <span class="card-tag">Architecture</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0825</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">Nordic Waterfront Urbanism &amp; Civic Scale</h3>
+              <p class="card-excerpt">
+                Copenhagen’s contemporary timber harbor pavilions merge civic infrastructure with human-centric public spaces. Low-carbon laminated timber construction creates sustainable architectural vitality.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card-item" data-category="spatial">
+            <div class="card-media">
+              <img src="experiences_salon.jpg" alt="Spatial Salon Encounters" loading="lazy">
+              <span class="card-tag">Spatial Art</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta-row">
+                <span>Ref #0826</span>
+                <span>60 Words</span>
+              </div>
+              <h3 class="card-title">Spatial Installations &amp; Sculptural Light</h3>
+              <p class="card-excerpt">
+                Illumination as architectural sculpture. Analyzing how linear minimalist luminaires define boundaries, frame voids, and evoke emotional warmth within brutalist and travertine interiors.
+              </p>
+              <button class="card-action" data-read-short>
+                Read 60-word Short <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
       </div>
-      <p class="initiated">Initiated by AAREN INTPRO</p>
+    </section>
+
+    <!-- ==========================================================================
+         Section 2: EVENTS (Slide 3 Composition - Alternating Split Layout)
+         ========================================================================== -->
+    <section class="section-spacing events-section" id="events">
+      <div class="container">
+        
+        <div class="events-split-grid">
+          
+          <!-- Left: Editorial Content & Event Schedule -->
+          <div>
+            <span class="category-eyebrow">02 / Gatherings &amp; Salons</span>
+            <h2 class="section-title">Events</h2>
+            <p class="lead-body" style="margin-top: 14px;">
+              From private salon roundtables and material explorations to international architecture symposiums, A’bcd brings the design community together beyond the drawing board.
+            </p>
+
+            <div class="events-list">
+              
+              <!-- Event 1 -->
+              <div class="event-row">
+                <div class="event-date-box">
+                  <span class="event-date-day">14</span>
+                  <span class="event-date-month">Nov</span>
+                </div>
+                <div class="event-info">
+                  <h3>A’bcd Architecture Salon #04: The Future of Dense Urbanism</h3>
+                  <div class="event-meta">
+                    <span>London &amp; Global Broadcast</span>
+                    <span>40 Limited Seats</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Architecture Salon #04">RSVP</button>
+              </div>
+
+              <!-- Event 2 -->
+              <div class="event-row">
+                <div class="event-date-box">
+                  <span class="event-date-day">28</span>
+                  <span class="event-date-month">Nov</span>
+                </div>
+                <div class="event-info">
+                  <h3>Materiality &amp; Tactility: Hands-on Workshop with Master Artisans</h3>
+                  <div class="event-meta">
+                    <span>Milan Design District</span>
+                    <span>Curated Workshop</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Materiality Workshop Milan">RSVP</button>
+              </div>
+
+              <!-- Event 3 -->
+              <div class="event-row">
+                <div class="event-date-box">
+                  <span class="event-date-day">12</span>
+                  <span class="event-date-month">Dec</span>
+                </div>
+                <div class="event-info">
+                  <h3>Design Biennale Roundtable: Computational Craft &amp; AI Initiatives</h3>
+                  <div class="event-meta">
+                    <span>Venice / Tokyo Live</span>
+                    <span>Panel &amp; Networking</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Design Biennale Roundtable">RSVP</button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Visual Feature Card representing Slide 3 mockup -->
+          <div>
+            <div class="card-item" style="box-shadow: var(--shadow-card); background: #FFFFFF;">
+              <div class="card-media" style="aspect-ratio: 16/11;">
+                <img src="experiences_salon.jpg" alt="A'bcd Salon Event">
+                <span class="card-tag">Featured Salon</span>
+              </div>
+              <div class="card-content">
+                <div class="card-meta-row">
+                  <span>Upcoming Gathering</span>
+                  <span>London / Milan</span>
+                </div>
+                <h3 class="card-title">A’bcd Design Salon Series: Conversations Beyond Disciplines</h3>
+                <p class="card-excerpt">
+                  Where creative minds connect over shared ideas, material prototypes, and architectural visions. We curate focused private gatherings where honest dialogue happens freely.
+                </p>
+                <button class="btn btn-primary" data-open="joinDlg" data-event-name="General Salon Series Registration">
+                  Register for Upcoming Gatherings
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 3: ARCHITECTURAL TRAVEL (Slide 4 Composition)
+         ========================================================================== -->
+    <section class="section-spacing travel-section" id="travel">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <span class="category-eyebrow">03 / Expeditions &amp; Field Studies</span>
+            <h2 class="section-title">Architectural Travel</h2>
+          </div>
+          <p class="lead-body">
+            Immersive architectural travel expeditions, global design tours, heritage study trips, and city walks curated specifically for architects and creative practitioners.
+          </p>
+        </div>
+
+        <div class="travel-grid">
+          
+          <!-- Expedition 1: Kyoto -->
+          <article class="travel-card">
+            <div class="travel-media">
+              <img src="images/travel_kyoto.jpg" alt="Kyoto Architectural Expedition" loading="lazy">
+              <span class="travel-duration-badge">5 Days • 12 Places</span>
+            </div>
+            <div class="travel-body">
+              <span class="travel-destination">Kyoto &amp; Kansai, Japan</span>
+              <h3 class="travel-title">Modernist Timber &amp; Zen Spatial Geometry</h3>
+              <p class="travel-summary">
+                Study traditional sukiya-zukuri carpentry alongside contemporary timber masterworks by Tadao Ando, Kengo Kuma, and SANAA. Private temple access and architect-guided tours.
+              </p>
+              <div class="travel-details-list">
+                <div><strong>Curator:</strong> Kenzo Takahashi (Architect &amp; Historian)</div>
+                <div><strong>Group:</strong> Strictly limited to 12 practitioners</div>
+              </div>
+              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Kyoto & Kansai 2026">
+                Request Expedition Dossier
+              </button>
+            </div>
+          </article>
+
+          <!-- Expedition 2: Copenhagen -->
+          <article class="travel-card">
+            <div class="travel-media">
+              <img src="images/travel_nordic.jpg" alt="Copenhagen Urbanism" loading="lazy">
+              <span class="travel-duration-badge">4 Days • 14 Places</span>
+            </div>
+            <div class="travel-body">
+              <span class="travel-destination">Copenhagen, Denmark</span>
+              <h3 class="travel-title">Nordic Urbanism &amp; Sustainable Civic Living</h3>
+              <p class="travel-summary">
+                An insider exploration of Danish sustainable urbanism, circular timber construction, waterfront revitalization, and adaptive reuse architecture across Copenhagen and Malmö.
+              </p>
+              <div class="travel-details-list">
+                <div><strong>Curator:</strong> Astrid Møller (Urban Architect)</div>
+                <div><strong>Group:</strong> Strictly limited to 14 practitioners</div>
+              </div>
+              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Copenhagen Urbanism 2026">
+                Request Expedition Dossier
+              </button>
+            </div>
+          </article>
+
+          <!-- Expedition 3: Swiss Alps -->
+          <article class="travel-card">
+            <div class="travel-media">
+              <img src="hero_collaboration.jpg" alt="Swiss Stone Architecture" loading="lazy">
+              <span class="travel-duration-badge">4 Days • 10 Places</span>
+            </div>
+            <div class="travel-body">
+              <span class="travel-destination">Vals &amp; Basel, Switzerland</span>
+              <h3 class="travel-title">Swiss Stone Architecture &amp; Thermal Sanctuaries</h3>
+              <p class="travel-summary">
+                Experience Peter Zumthor's Therme Vals, Herzog &amp; de Meuron's Vitra Campus, and private Swiss architectural studios focused on monolithic craftsmanship and local stone materiality.
+              </p>
+              <div class="travel-details-list">
+                <div><strong>Curator:</strong> Christian Weiss (Spatial Designer)</div>
+                <div><strong>Group:</strong> Strictly limited to 10 practitioners</div>
+              </div>
+              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Swiss Stone & Thermal Vals 2026">
+                Request Expedition Dossier
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 4: NETWORKING (Slide 5 Composition)
+         ========================================================================== -->
+    <section class="section-spacing networking-section" id="networking">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <span class="category-eyebrow">04 / Creative Fraternity Directory</span>
+            <h2 class="section-title">Networking</h2>
+          </div>
+          <p class="lead-body">
+            Connect with the architects, interior designers, urbanists, and makers shaping our built environment. Build relationships beyond the drawing board.
+          </p>
+        </div>
+
+        <div class="networking-grid">
+          
+          <!-- Member 1 -->
+          <div class="profile-card">
+            <div class="profile-avatar">EV</div>
+            <h3 class="profile-name">Ar. Elena Vance</h3>
+            <span class="profile-role">Principal Architect</span>
+            <span class="profile-location">London, UK • Studio Forma</span>
+            <p class="profile-bio">Specializing in contemporary cultural institutions, low-carbon rammed earth, and adaptive civic reuse.</p>
+            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="profile-card">
+            <div class="profile-avatar">MC</div>
+            <h3 class="profile-name">Marcus Chen</h3>
+            <span class="profile-role">Interior Design Director</span>
+            <span class="profile-location">Copenhagen, DK • Atelier Chen</span>
+            <p class="profile-bio">Focused on sensory hospitality interiors, bespoke joinery, and minimalist residential atmospheres.</p>
+            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="profile-card">
+            <div class="profile-avatar">PS</div>
+            <h3 class="profile-name">Priya Sharma</h3>
+            <span class="profile-role">Materiality Consultant</span>
+            <span class="profile-location">Mumbai, IN • Surface Lab</span>
+            <p class="profile-bio">Curating artisanal stone, acoustic fiber systems, and vernacular architectural craft traditions.</p>
+            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="profile-card">
+            <div class="profile-avatar">JM</div>
+            <h3 class="profile-name">Julian Moreau</h3>
+            <span class="profile-role">Urbanist &amp; Landscape Lead</span>
+            <span class="profile-location">Paris, FR • Bureau Territoire</span>
+            <p class="profile-bio">Designing biophilic urban ecosystems, pedestrian corridors, and public botanical installations.</p>
+            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
+          </div>
+
+        </div>
+
+        <!-- Community Values Block -->
+        <div class="values-panel">
+          <span class="category-eyebrow">The ABCD Philosophy</span>
+          <h2 class="section-title">A different way to connect.</h2>
+          
+          <div class="values-grid">
+            <div class="value-item">
+              <h3>People over Profiles</h3>
+              <p>We believe meaningful relationships begin with genuine conversations, shared interests, and a willingness to learn from one another.</p>
+            </div>
+            <div class="value-item">
+              <h3>Design beyond Disciplines</h3>
+              <p>Architecture, interiors, materials, lighting, furniture, and technology intersect. We bring different perspectives into the same conversation.</p>
+            </div>
+            <div class="value-item">
+              <h3>Community beyond Business</h3>
+              <p>Not every interaction needs to become a transaction. We want to create a space where relationships grow naturally and opportunities follow.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Community Brands & Partners Carousel (Preserved & Elevated)
+         ========================================================================== -->
+    <section class="brands-section" id="brands">
+      <div class="container">
+        <div class="brands-header">
+          <h2 class="section-title" style="font-size: 1.8rem;">Community Brands &amp; Studios</h2>
+          <span style="font-size: 0.9rem; color: var(--accent-bronze); font-weight: 500;">Collaborating across the AEC ecosystem</span>
+        </div>
+
+        <div class="brands-carousel">
+          <button class="carousel-arrow" id="brandPrev" aria-label="Previous brands">&larr;</button>
+          <div class="carousel-viewport" id="brandViewport" tabindex="0" aria-label="Brand partners list">
+            <div class="carousel-track" id="brandTrack">
+              <div class="brand-box">Atelier Intpro</div>
+              <div class="brand-box">Forma Studio</div>
+              <div class="brand-box">Nordic Craft</div>
+              <div class="brand-box">Terra &amp; Stone</div>
+              <div class="brand-box">Luminaire Lab</div>
+              <div class="brand-box">Aaren Surfaces</div>
+              <div class="brand-box">Spatial Guild</div>
+            </div>
+          </div>
+          <button class="carousel-arrow" id="brandNext" aria-label="Next brands">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Final Call to Action
+         ========================================================================== -->
+    <section class="final-cta" id="contact">
+      <div class="container">
+        <h2>Your people. Your perspective. Your design community.</h2>
+        <p class="lead-body">
+          Whether you’re an architect, interior designer, creative professional, or someone shaping the future of spaces, there’s a place for you at A’bcd. Come for the conversations. Stay for the connections.
+        </p>
+
+        <div class="final-actions">
+          <button class="btn btn-primary" data-open="joinDlg">Be part of A’bcd</button>
+          <button class="btn btn-outline" data-open="contactDlg">Get in touch</button>
+        </div>
+
+        <p class="final-initiative">An initiative by AAREN INTPRO</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" aria-label="A'bcd Home">
+          <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="footer-logo-img" width="160" height="43">
+        </a>
+        <p style="margin-top: 4px;">&copy; 2026 A’bcd. An initiative by AAREN INTPRO. All rights reserved.</p>
+      </div>
+
+      <ul class="footer-nav">
+        <li><button data-open="contactDlg">Contact Us</button></li>
+        <li><button data-open="privacyDlg">Privacy Policy</button></li>
+        <li><button data-open="termsDlg">Terms &amp; Conditions</button></li>
+      </ul>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap">
-    <div class="brand">
-      <a class="footer-logo" href="#top" aria-label="A’bcd home">
-        <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="footer-logo-img" width="160" height="43">
-      </a>
-      <p class="footer-copy">© 2026 A’bcd. An initiative by AAREN INTPRO.</p>
+  <!-- ==========================================================================
+       Modals & Dialogs (Preserved and Functional)
+       ========================================================================== -->
+
+  <!-- Membership Application Dialog -->
+  <dialog id="joinDlg" aria-labelledby="joinTitle">
+    <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
+    <h3 id="joinTitle">Become a member</h3>
+    <p>Join architects, interior designers, and creative professionals shaping our built environment.</p>
+    <form data-form>
+      <label>Full name
+        <input required name="name" autocomplete="name" placeholder="e.g. Ar. Elena Vance">
+      </label>
+      <label>Email address
+        <input required type="email" name="email" autocomplete="email" placeholder="elena@studioforma.com">
+      </label>
+      <label>Studio, firm or practice
+        <input name="firm" placeholder="e.g. Studio Forma">
+      </label>
+      <label>Discipline
+        <select required name="discipline">
+          <option value="">Select your discipline</option>
+          <option>Architecture</option>
+          <option>Interior Design</option>
+          <option>Landscape &amp; Urban Design</option>
+          <option>Materials, Lighting &amp; Furniture</option>
+          <option>Other Creative Profession</option>
+        </select>
+      </label>
+      <label>City &amp; Country
+        <input name="city" placeholder="e.g. London, United Kingdom">
+      </label>
+      <button class="btn btn-primary" type="submit" style="margin-top: 8px;">Submit application</button>
+      <div class="form-feedback-ok" role="status">Thank you. Your application has been received. Our team will review your credentials shortly.</div>
+    </form>
+  </dialog>
+
+  <!-- Contact Us Dialog -->
+  <dialog id="contactDlg" aria-labelledby="contactTitle">
+    <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
+    <h3 id="contactTitle">Get in touch</h3>
+    <p>Suggest a gathering, inquire about an architectural expedition, or share an idea with our team.</p>
+    <form data-form>
+      <label>Full name
+        <input required name="name" autocomplete="name" placeholder="Your name">
+      </label>
+      <label>Email address
+        <input required type="email" name="email" autocomplete="email" placeholder="yourname@domain.com">
+      </label>
+      <label>Message
+        <textarea required rows="4" name="msg" placeholder="Tell us how we can help or collaborate..."></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit" style="margin-top: 8px;">Send message</button>
+      <div class="form-feedback-ok" role="status">Thank you. Your message has been dispatched to the A’bcd community team.</div>
+    </form>
+  </dialog>
+
+  <!-- Terms & Conditions Dialog -->
+  <dialog id="termsDlg" aria-labelledby="termsTitle">
+    <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
+    <h3 id="termsTitle">Terms &amp; Conditions</h3>
+    <h4 style="margin-top: 20px; font-weight: 600;">Community Spirit</h4>
+    <p style="margin-top: 6px;">A’bcd is a space for mutual professional respect. Members engage constructively and keep all architectural dialogues and salons welcoming.</p>
+    <h4 style="margin-top: 16px; font-weight: 600;">Intellectual Property &amp; Attribution</h4>
+    <p style="margin-top: 6px;">Designs, models, and concepts shared within A’bcd gatherings remain the intellectual property of their respective creators. Clear attribution is required.</p>
+    <h4 style="margin-top: 16px; font-weight: 600;">Membership Review</h4>
+    <p style="margin-top: 6px;">Membership is subject to periodic review by the community committee to maintain high standards of professional engagement.</p>
+  </dialog>
+
+  <!-- Privacy Policy Dialog -->
+  <dialog id="privacyDlg" aria-labelledby="privacyTitle">
+    <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
+    <h3 id="privacyTitle">Privacy Policy</h3>
+    <h4 style="margin-top: 20px; font-weight: 600;">Information We Collect</h4>
+    <p style="margin-top: 6px;">When applying to join A’bcd or registering for events, we collect professional contact details (name, email, discipline, practice name).</p>
+    <h4 style="margin-top: 16px; font-weight: 600;">Purpose of Data Use</h4>
+    <p style="margin-top: 6px;">We use your information exclusively to administer membership, send invitations to salons and architectural expeditions, and publish community directories. We do not sell data.</p>
+    <h4 style="margin-top: 16px; font-weight: 600;">Data Rights</h4>
+    <p style="margin-top: 6px;">You may request updates, corrections, or deletion of your profile data at any time by contacting our community team.</p>
+  </dialog>
+
+  <!-- Interactive 60-Word Short Reader Dialog -->
+  <dialog id="cardDetailDlg" aria-labelledby="readerTitle">
+    <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
+    <div class="reader-modal-header">
+      <span class="category-eyebrow" id="readerCategory">Inspirations</span>
+      <h3 id="readerTitle" style="font-size: 1.6rem; margin-top: 4px;">Story Title</h3>
+      <p id="readerMeta" style="font-size: 0.82rem; color: var(--accent-bronze); margin-top: 4px;">60 Words • A'bcd Editorial</p>
     </div>
-    <ul>
-      <li><button data-open="contactDlg">Contact Us</button></li>
-      <li><button data-open="privacyDlg">Privacy Policy</button></li>
-      <li><button data-open="termsDlg">Terms &amp; Conditions</button></li>
-    </ul>
+    <div class="reader-modal-media">
+      <img src="images/material-library.jpg" alt="Short media" id="readerImage">
+    </div>
+    <div class="reader-short-box">
+      <p id="readerShort" style="color: var(--text-black); font-size: 1.02rem; line-height: 1.7;"></p>
+    </div>
+    <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 12px;">
+      <button class="btn btn-outline btn-sm" data-close>Close</button>
+      <button class="btn btn-primary btn-sm" data-open="joinDlg">Join to Save &amp; Discuss</button>
+    </div>
+  </dialog>
+
+  <!-- Cookie Notice Banner -->
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent banner">
+    <p>We use essential cookies to maintain performance and anonymous analytics to improve the A’bcd creative platform.</p>
+    <div class="cookie-row">
+      <button class="cookie-btn accept" id="cookieAccept" type="button">Accept</button>
+      <button class="cookie-btn" id="cookieDecline" type="button">Decline</button>
+    </div>
   </div>
-</footer>
 
-<!-- DIALOGS -->
-<dialog id="joinDlg" aria-labelledby="joinTitle">
-  <button class="x" data-close aria-label="Close" type="button">&times;</button>
-  <h3 id="joinTitle">Become a member</h3>
-  <p>Join architects, interior designers and creative professionals shaping our built environment.</p>
-  <form data-form>
-    <label>Full name<input required name="name" autocomplete="name"></label>
-    <label>Email address<input required type="email" name="email" autocomplete="email"></label>
-    <label>Studio, firm or practice<input name="firm"></label>
-    <label>Discipline
-      <select required name="discipline">
-        <option value="">Select one</option>
-        <option>Architecture</option>
-        <option>Interior design</option>
-        <option>Landscape &amp; urban design</option>
-        <option>Materials, lighting or furniture</option>
-        <option>Other creative profession</option>
-      </select>
-    </label>
-    <label>City<input name="city"></label>
-    <button class="btn" type="submit">Submit application</button>
-    <div class="ok" role="status">Thank you. Your application has been received.</div>
-  </form>
-</dialog>
-
-<dialog id="contactDlg" aria-labelledby="contactTitle">
-  <button class="x" data-close aria-label="Close" type="button">&times;</button>
-  <h3 id="contactTitle">Get in touch</h3>
-  <p>Suggest a gathering, share a material idea, or ask our community team a question.</p>
-  <form data-form>
-    <label>Full name<input required name="name" autocomplete="name"></label>
-    <label>Email address<input required type="email" name="email" autocomplete="email"></label>
-    <label>Message<textarea required rows="4" name="msg"></textarea></label>
-    <button class="btn" type="submit">Send message</button>
-    <div class="ok" role="status">Thank you. We’ll be in touch soon.</div>
-  </form>
-</dialog>
-
-<dialog id="termsDlg" aria-labelledby="termsTitle">
-  <!-- Draft wording. Replace with approved legal text. -->
-  <button class="x" data-close aria-label="Close" type="button">&times;</button>
-  <h3 id="termsTitle">Terms &amp; Conditions</h3>
-  <h4>Community spirit</h4>
-  <p>A’bcd is a space for mutual professional respect. Members engage constructively and keep conversations welcoming.</p>
-  <h4>Shared ideas</h4>
-  <p>Designs and ideas shared in gatherings remain the work of their creators. Please credit them when you refer to them.</p>
-  <h4>Membership</h4>
-  <p>Membership is subject to review. We may decline or end membership where these principles are not upheld.</p>
-</dialog>
-
-<dialog id="privacyDlg" aria-labelledby="privacyTitle">
-  <!-- Draft wording. Replace with approved legal text. -->
-  <button class="x" data-close aria-label="Close" type="button">&times;</button>
-  <h3 id="privacyTitle">Privacy Policy</h3>
-  <h4>What we collect</h4>
-  <p>When you apply to join or get in touch, we collect the details you give us, such as your name, email and discipline.</p>
-  <h4>How we use it</h4>
-  <p>We use your details only to run A’bcd, including invitations to gatherings and community updates. We do not sell your information.</p>
-  <h4>Your choices</h4>
-  <p>You can ask us to update or remove your details at any time by contacting us.</p>
-</dialog>
-
-<!-- COOKIE NOTICE -->
-<div id="cookie" role="region" aria-label="Cookie notice">
-  We use essential cookies to keep this site working, and anonymous insights to improve it.
-  <div class="row">
-    <button class="y" id="ck-yes" type="button">Accept</button>
-    <button id="ck-no" type="button">Decline</button>
-  </div>
-</div>
-
-<script>
-// Mobile navigation menu toggle
-const nav = document.getElementById('nav'), mb = document.getElementById('menuBtn');
-if (mb && nav) {
-  mb.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    mb.setAttribute('aria-expanded', String(open));
-  });
-  nav.addEventListener('click', e => {
-    if (e.target.tagName === 'A') {
-      nav.classList.remove('open');
-      mb.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
-// Dialog openers and backdrop handling
-document.querySelectorAll('[data-open]').forEach(b => {
-  b.addEventListener('click', () => {
-    const dlg = document.getElementById(b.dataset.open);
-    if (dlg) {
-      const ok = dlg.querySelector('.ok');
-      if (ok) ok.style.display = 'none';
-      dlg.showModal();
-    }
-  });
-});
-
-document.querySelectorAll('[data-close]').forEach(b => {
-  b.addEventListener('click', () => {
-    const dlg = b.closest('dialog');
-    if (dlg) dlg.close();
-  });
-});
-
-document.querySelectorAll('dialog').forEach(d => {
-  d.addEventListener('click', e => {
-    const rect = d.getBoundingClientRect();
-    const isInDialog = (
-      rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
-      rect.left <= e.clientX && e.clientX <= rect.left + rect.width
-    );
-    if (!isInDialog) d.close();
-  });
-});
-
-// Forms submission handling
-document.querySelectorAll('form[data-form]').forEach(f => {
-  f.addEventListener('submit', e => {
-    e.preventDefault();
-    // TODO: Connect this form handler to your production API / CRM endpoint
-    const ok = f.querySelector('.ok');
-    if (ok) ok.style.display = 'block';
-    f.reset();
-  });
-});
-
-// Highlight the active navigation link for the section in view
-const links = [...(nav ? nav.querySelectorAll('a') : [])];
-const io = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) {
-      links.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
-      });
-    }
-  });
-}, { rootMargin: '-45% 0px -50% 0px' });
-
-document.querySelectorAll('section[id]').forEach(s => io.observe(s));
-
-// Cookie notice banner
-const ck = document.getElementById('cookie');
-if (ck) {
-  try {
-    if (localStorage.getItem('abcd-cookie')) ck.remove();
-  } catch (e) {}
-
-  ['ck-yes', 'ck-no'].forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) {
-      btn.addEventListener('click', () => {
-        try { localStorage.setItem('abcd-cookie', id); } catch (e) {}
-        ck.remove();
-      });
-    }
-  });
-}
-
-// Brands carousel: slow automatic loop, pauses on hover/focus, arrows move it manually
-(() => {
-  const vp = document.getElementById('viewport');
-  const tr = document.getElementById('track');
-  if (!vp || !tr) return;
-
-  const originals = [...tr.children];
-  if (!originals.length) return;
-
-  // Repeat the logos until the track is long enough for a seamless loop
-  const minRequiredWidth = Math.max(window.innerWidth * 2, 1600) + 400;
-  while (tr.scrollWidth < minRequiredWidth) {
-    originals.forEach(n => tr.appendChild(n.cloneNode(true)));
-  }
-
-  const gap = 24;
-  const stepW = () => (originals[0] ? originals[0].offsetWidth + gap : 194);
-  const loopW = () => stepW() * originals.length;
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  let pos = 0;
-  let paused = false;
-  let last = 0;
-  let isAnimating = false;
-
-  const draw = () => {
-    const L = loopW();
-    if (L <= 0) return;
-    pos = ((pos % L) + L) % L;
-    tr.style.transform = `translateX(${-pos}px)`;
-  };
-
-  const tick = t => {
-    if (!last) last = t;
-    const dt = t - last;
-    last = t;
-    if (!paused && !prefersReduced && !isAnimating) {
-      pos += dt * 0.035;
-      draw();
-    }
-    requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-
-  const move = dir => {
-    paused = true;
-    isAnimating = true;
-    const from = pos;
-    const to = pos + dir * stepW();
-    const t0 = performance.now();
-
-    const ease = n => {
-      const k = Math.min(1, (n - t0) / 450);
-      const e = 1 - Math.pow(1 - k, 3);
-      pos = from + (to - from) * e;
-      draw();
-      if (k < 1) {
-        requestAnimationFrame(ease);
-      } else {
-        isAnimating = false;
-        setTimeout(() => {
-          paused = false;
-        }, 1500);
-      }
-    };
-    requestAnimationFrame(ease);
-  };
-
-  const nextBtn = document.getElementById('next');
-  const prevBtn = document.getElementById('prev');
-  if (nextBtn) nextBtn.addEventListener('click', () => move(1));
-  if (prevBtn) prevBtn.addEventListener('click', () => move(-1));
-
-  vp.addEventListener('mouseenter', () => { paused = true; });
-  vp.addEventListener('mouseleave', () => { if (!isAnimating) paused = false; });
-  vp.addEventListener('focus', () => { paused = true; });
-  vp.addEventListener('blur', () => { if (!isAnimating) paused = false; });
-
-  vp.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      move(1);
-    }
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      move(-1);
-    }
-  });
-})();
-</script>
+  <!-- Client-Side Controller -->
+  <script src="script.js"></script>
 </body>
 </html>
