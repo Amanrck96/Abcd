@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A’bcd — all ’bout creativity &amp; design | An initiative by AAREN INTPRO</title>
-  <meta name="description" content="A’bcd brings architects, interior designers, and the wider creative fraternity together to discover curated 60-word design intelligence, inspirations, events, architectural travel, and networking.">
-  
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
-  <!-- Google Fonts: Jost (Contemporary Sans) & Cormorant Garamond (Editorial Display) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main Design System Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="A’bcd brings architects, interior designers, and the wider creative fraternity together to discover curated 60-word design intelligence, inspirations, events, architectural travel, and networking." />
+  <link rel="icon" type="image/png" href="images/reference/logo.png" />
+  <link rel="apple-touch-icon" href="images/reference/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ==========================================================================
-       Sticky Header with Presentation Branding & 4 Main Navigation Categories
-       ========================================================================== -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-container">
-      <!-- ABCD Wordmark & Tagline -->
       <a href="#hero" class="brand-link" aria-label="A’bcd — All ’bout creativity &amp; design Home">
-        <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="brand-logo-image" width="165" height="44">
+        <img src="images/reference/logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="brand-logo-image" width="165" height="44" />
       </a>
-
-      <!-- 4 Core Navigation Categories from Presentation -->
+      
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
         <ul class="nav-list">
           <li><a href="#inspirations" class="nav-link">Inspirations + References</a></li>
@@ -40,10 +30,8 @@
         </ul>
       </nav>
 
-      <!-- Action Button & Mobile Drawer Toggle -->
       <div class="header-actions">
-        <button class="btn btn-primary btn-sm" data-open="joinDlg">Become a member</button>
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
           <span></span>
           <span></span>
           <span></span>
@@ -53,29 +41,31 @@
   </header>
 
   <main>
-    <!-- ==========================================================================
-         Hero Section (Slide 1 & 2 Composition): 60-Word Card Phone Mockup + Editorial
-         ========================================================================== -->
+    <!-- Slide 1: Hero Section -->
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
-        
-        <!-- Left: Interactive Smartphone Mockup showing 60-word Short Card -->
+        <!-- Left: Interactive Smartphone Mockup -->
         <div class="phone-mockup-wrapper">
           <div class="phone-mockup">
             <div class="phone-screen">
-              <!-- Mobile Status Bar -->
               <div class="phone-status-bar">
                 <span>5:43</span>
                 <div class="phone-status-icons">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
-                  <svg width="14" height="10" viewBox="0 0 24 16" fill="currentColor"><rect x="1" y="2" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="4" y="5" width="10" height="6" fill="currentColor"/><path d="M21 6v4" stroke="currentColor" stroke-width="2"/></svg>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.57 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+                  </svg>
+                  <svg width="14" height="10" viewBox="0 0 24 16" fill="currentColor">
+                    <rect x="1" y="2" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <rect x="4" y="5" width="10" height="6" fill="currentColor"/>
+                    <path d="M21 6v4" stroke="currentColor" stroke-width="2"/>
+                  </svg>
                 </div>
               </div>
 
               <!-- Live Card Container -->
-              <div class="phone-card" id="phoneLiveCard" title="Tap to read full piece">
+              <div class="phone-card" id="phoneLiveCard" title="Tap to read full piece" style="cursor: pointer;">
                 <div class="phone-card-media">
-                  <img src="images/material-library.jpg" alt="Architecture card" class="phone-card-img" id="phoneCardImg">
+                  <img id="phoneCardImg" src="images/reference/hero_card.jpeg" alt="The Poetics of Monolithic Concrete: Purity in Spatial Form" class="phone-card-img" />
                   <span class="phone-card-badge" id="phoneCardBadge">Inspirations + References</span>
                 </div>
                 <div class="phone-card-body">
@@ -85,12 +75,12 @@
                     <p class="phone-card-meta" id="phoneCardMeta">60 words • Curated by A'bcd Studio</p>
                   </div>
                   <div class="phone-card-footer">
-                    <span class="phone-tap-prompt">Tap to read full short &rarr;</span>
+                    <span class="phone-tap-prompt">Tap to read full short →</span>
                     <div class="phone-swipe-indicator">
-                      <span class="phone-dot active" data-index="0"></span>
-                      <span class="phone-dot" data-index="1"></span>
-                      <span class="phone-dot" data-index="2"></span>
-                      <span class="phone-dot" data-index="3"></span>
+                      <span class="phone-dot active" data-index="0" title="Inspirations"></span>
+                      <span class="phone-dot" data-index="1" title="Events"></span>
+                      <span class="phone-dot" data-index="2" title="Architectural Travel"></span>
+                      <span class="phone-dot" data-index="3" title="Networking"></span>
                     </div>
                   </div>
                 </div>
@@ -101,59 +91,15 @@
 
         <!-- Right: Editorial Presentation Copy & Official Store Badges -->
         <div class="hero-copy">
-          <!-- Partner Brands Showcase: Brands We Deal With (WhatsApp Reference) -->
-          <div class="hero-partner-brands" aria-label="Partner brands we deal with">
-            <div class="hero-partner-heading">
-              <span class="hero-partner-tag">BRANDS WE DEAL WITH</span>
-              <span class="hero-partner-sub">Curated Global Materials &amp; Architectural Fittings</span>
-            </div>
-            <div class="hero-partner-ticker" tabindex="0">
-              <div class="hero-partner-track">
-                <!-- Group 1 -->
-                <div class="hero-partner-item" title="Falper"><img src="images/brands/brand_clean_01.png" alt="Falper"></div>
-                <div class="hero-partner-item" title="Fima Carlo Frattini"><img src="images/brands/brand_clean_02.png" alt="Fima Carlo Frattini"></div>
-                <div class="hero-partner-item" title="Formica"><img src="images/brands/brand_clean_03.png" alt="Formica"></div>
-                <div class="hero-partner-item" title="NewTechWood"><img src="images/brands/brand_clean_04.png" alt="NewTechWood"></div>
-                <div class="hero-partner-item" title="Waltz Door &amp; Partition"><img src="images/brands/brand_clean_05.png" alt="Waltz"></div>
-                <div class="hero-partner-item" title="Loco Design"><img src="images/brands/brand_clean_06.png" alt="Loco Design"></div>
-                <div class="hero-partner-item" title="WOW Ceramic Design"><img src="images/brands/brand_clean_07.png" alt="WOW"></div>
-                <div class="hero-partner-item" title="Slashform"><img src="images/brands/brand_clean_08.png" alt="Slashform"></div>
-                <div class="hero-partner-item" title="Peel Ply"><img src="images/brands/brand_clean_09.png" alt="Peel Ply"></div>
-                <div class="hero-partner-item" title="Bodaq Interior Film"><img src="images/brands/brand_clean_10.png" alt="Bodaq"></div>
-                <div class="hero-partner-item" title="IW Surfaces"><img src="images/brands/brand_clean_11.png" alt="IW"></div>
-                <div class="hero-partner-item" title="Agape Design"><img src="images/brands/brand_clean_12.png" alt="Agape"></div>
-                <div class="hero-partner-item" title="Mirage Granito Ceramico"><img src="images/brands/brand_clean_13.png" alt="Mirage"></div>
-                <div class="hero-partner-item" title="Mafi Natural Wood"><img src="images/brands/brand_clean_14.png" alt="Mafi"></div>
-                <div class="hero-partner-item" title="Inclass Veneer"><img src="images/brands/brand_clean_15.png" alt="Inclass Veneer"></div>
-                <div class="hero-partner-item" title="Inkiostro Bianco"><img src="images/brands/brand_clean_16.png" alt="Inkiostro Bianco"></div>
-                <!-- Duplicate Group for seamless continuous marquee loop -->
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_01.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_02.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_03.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_04.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_05.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_06.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_07.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_08.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_09.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_10.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_11.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_12.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_13.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_14.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_15.png" alt=""></div>
-                <div class="hero-partner-item" aria-hidden="true"><img src="images/brands/brand_clean_16.png" alt=""></div>
-              </div>
-            </div>
+          <div class="hero-header-block">
+            <span class="category-eyebrow">All ’bout creativity &amp; design</span>
+            <h1 class="hero-title">Stay informed in 60 words.</h1>
           </div>
-          <h1 class="display-title hero-title">Stay informed in 60 words.</h1>
           <p class="lead-body hero-description">
             We understand you don’t have time to go through long news articles every day. So we cut the clutter and deliver them in 60-word shorts. Short news for the mobile generation of architects, designers, and creative minds.
           </p>
-
-          <!-- Presentation App Badges -->
+          
           <div class="store-badges">
-            <!-- App Store Badge -->
             <a href="https://apps.apple.com" target="_blank" rel="noopener" class="store-badge" aria-label="Download on the App Store">
               <svg width="24" height="24" viewBox="0 0 24 24">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2.02.6-2.66 1.34-.56.64-1.05 1.71-.92 2.74 1.01.08 2.05-.46 2.66-1.21z"/>
@@ -163,8 +109,6 @@
                 <span class="store-name">App Store</span>
               </div>
             </a>
-
-            <!-- Google Play Badge -->
             <a href="https://play.google.com/store" target="_blank" rel="noopener" class="store-badge" aria-label="Get it on Google Play">
               <svg width="22" height="24" viewBox="0 0 24 24">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.367-.61-.91-.61-1.554V3.368c0-.644.24-1.187.61-1.554zm11.24 11.243l2.25 2.25-10.742 6.138 8.492-8.388zm0-2.114L6.357 2.555l10.742 6.138-2.25 2.25zm1.536 1.057l3.666 2.095c.87.498.87 1.314 0 1.812l-3.666 2.095-2.023-2.023 2.023-1.979z"/>
@@ -175,568 +119,308 @@
               </div>
             </a>
           </div>
-
-          <!-- Secondary Actions -->
-          <div class="hero-cta-group">
-            <button class="btn btn-primary" data-open="joinDlg">Become a member</button>
-            <a href="#inspirations" class="btn btn-outline">Explore Inspirations</a>
-          </div>
         </div>
-
       </div>
     </section>
 
-    <hr class="section-divider">
-
-    <!-- ==========================================================================
-         Section 1: INSPIRATIONS + REFERENCES (Slide 2 Exact)
-         ========================================================================== -->
-    <section class="section-spacing" id="inspirations">
-      <div class="container">
-        
-        <div class="section-header-split">
-          <div>
-            <span class="category-eyebrow">01 / Visual Archive &amp; Design Intelligence</span>
-            <h2 class="section-title">Inspirations + References</h2>
+    <!-- Slide 2: Inspirations + References -->
+    <section class="ppt-section" id="inspirations">
+      <div class="container ppt-grid ppt-left">
+        <!-- Phone Mockup on Left -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>5:43</span>
+              </div>
+              <div class="phone-card" data-read-short data-category="Inspirations + References" data-headline="The Poetics of Monolithic Concrete: Purity in Spatial Form" data-img="images/reference/inspirations_card.jpeg" data-text="Behind every remarkable structure is a person with an idea. Raw board-formed concrete, dramatic natural lightwells, and quiet minimalist proportions redefine contemplative spaces for the contemporary era." data-meta="60 words • Curated by A'bcd Studio" style="cursor: pointer;">
+                <div class="phone-card-media">
+                  <img src="images/reference/inspirations_card.jpeg" alt="Inspirations + References" class="phone-card-img" />
+                  <span class="phone-card-badge">Inspirations + References</span>
+                </div>
+                <div class="phone-card-body">
+                  <div>
+                    <h4 class="phone-card-headline">The Poetics of Monolithic Concrete: Purity in Spatial Form</h4>
+                    <p class="phone-card-text">Behind every remarkable structure is a person with an idea. Raw board-formed concrete, dramatic natural lightwells, and quiet minimalist proportions redefine contemplative spaces for the contemporary era.</p>
+                    <p class="phone-card-meta">60 words • Curated by A'bcd Studio</p>
+                  </div>
+                  <div class="phone-card-footer">
+                    <span class="phone-tap-prompt">Tap to read full short →</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Copy on Right -->
+        <div class="ppt-copy">
+          <span class="ppt-label">Inspirations + References</span>
           <p class="lead-body">
-            An editorial discovery experience for architecture, design inspiration, creative references, and material collections—condensed into 60-word briefs.
+            We understand you don’t have time to go through long news articles every day. So we cut the clutter and deliver them in 60-word shorts. Short news for the mobile generation of architects, designers, and creative minds.
+          </p>
+          <div class="store-badges">
+            <a href="https://apps.apple.com" target="_blank" rel="noopener" class="store-badge" aria-label="Download on the App Store">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2.02.6-2.66 1.34-.56.64-1.05 1.71-.92 2.74 1.01.08 2.05-.46 2.66-1.21z"/>
+              </svg>
+              <div class="store-badge-text">
+                <span class="caption">Download on the</span>
+                <span class="store-name">App Store</span>
+              </div>
+            </a>
+            <a href="https://play.google.com/store" target="_blank" rel="noopener" class="store-badge" aria-label="Get it on Google Play">
+              <svg width="22" height="24" viewBox="0 0 24 24">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.367-.61-.91-.61-1.554V3.368c0-.644.24-1.187.61-1.554zm11.24 11.243l2.25 2.25-10.742 6.138 8.492-8.388zm0-2.114L6.357 2.555l10.742 6.138-2.25 2.25zm1.536 1.057l3.666 2.095c.87.498.87 1.314 0 1.812l-3.666 2.095-2.023-2.023 2.023-1.979z"/>
+              </svg>
+              <div class="store-badge-text">
+                <span class="caption">GET IT ON</span>
+                <span class="store-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Events -->
+    <section class="ppt-section" id="events">
+      <div class="container ppt-grid ppt-right">
+        <!-- Copy on Left -->
+        <div class="ppt-copy">
+          <span class="ppt-label">Events</span>
+          <p class="lead-body">
+            We pick up articles from all your favourite sources and present them in 60-word shorts. Read full articles for shorts that interest you, within the app.
           </p>
         </div>
 
-        <!-- Filter Bar -->
-        <div class="filter-bar" role="tablist" aria-label="Inspirations Filter">
-          <button class="filter-btn active" data-filter="all">All Collections</button>
-          <button class="filter-btn" data-filter="architecture">Architecture</button>
-          <button class="filter-btn" data-filter="interiors">Interiors</button>
-          <button class="filter-btn" data-filter="materiality">Materiality</button>
-          <button class="filter-btn" data-filter="spatial">Spatial Art</button>
+        <!-- Phone Mockup on Right -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>5:43</span>
+              </div>
+              <div class="phone-card" data-read-short data-category="Events" data-headline="Salon #04: Dense Urbanism and the Architecture of Solitude" data-img="images/reference/events_card.jpeg" data-text="Join 40 leading architects, urbanists, and interior designers in an intimate roundtable exploring the future of high-density living, acoustic sanctuaries, and human-centric communal spaces." data-meta="Milan & London • Limited to 40 Practitioners" style="cursor: pointer;">
+                <div class="phone-card-media">
+                  <img src="images/reference/events_card.jpeg" alt="Events" class="phone-card-img" />
+                  <span class="phone-card-badge">Events</span>
+                </div>
+                <div class="phone-card-body">
+                  <div>
+                    <h4 class="phone-card-headline">Salon #04: Dense Urbanism and the Architecture of Solitude</h4>
+                    <p class="phone-card-text">Join 40 leading architects, urbanists, and interior designers in an intimate roundtable exploring the future of high-density living, acoustic sanctuaries, and human-centric communal spaces.</p>
+                    <p class="phone-card-meta">Milan &amp; London • Limited to 40 Practitioners</p>
+                  </div>
+                  <div class="phone-card-footer">
+                    <span class="phone-tap-prompt">Tap to read full short →</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Grid of 6 Editorial Cards -->
-        <div class="inspirations-grid">
-          
-          <!-- Card 1 -->
-          <article class="card-item" data-category="architecture">
-            <div class="card-media">
-              <img src="images/material-library.jpg" alt="Monolithic Concrete" loading="lazy">
-              <span class="card-tag">Architecture</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0821</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">The Poetics of Monolithic Concrete</h3>
-              <p class="card-excerpt">
-                Raw board-formed concrete, dramatic natural lightwells, and quiet minimalist proportions redefine contemplative spaces for the contemporary era. Purity in spatial volume allows light to become the primary material.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card-item" data-category="architecture">
-            <div class="card-media">
-              <img src="images/travel_kyoto.jpg" alt="Kyoto Zen Pavilions" loading="lazy">
-              <span class="card-tag">Architecture</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0822</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">Kyoto Pavilion Studies &amp; Zen Geometry</h3>
-              <p class="card-excerpt">
-                Traditional Japanese cedar joinery seamlessly meets modernist cantilevered glass. Water courtyards act as acoustic buffers, merging indoor tatami serenity with outdoor natural reflection.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card-item" data-category="interiors">
-            <div class="card-media">
-              <img src="about_vision.jpg" alt="Studio Practice" loading="lazy">
-              <span class="card-tag">Interiors</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0823</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">Studio Practice &amp; Collaborative Blueprints</h3>
-              <p class="card-excerpt">
-                Behind every remarkable space is a person with an idea. Exploring the tactile translation from hand-drawn scale drawings and basswood scale models into physical built environments.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card-item" data-category="materiality">
-            <div class="card-media">
-              <img src="hero_collaboration.jpg" alt="Material Tactility" loading="lazy">
-              <span class="card-tag">Materiality</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0824</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">Material Tactility: Patinated Brass &amp; Limestone</h3>
-              <p class="card-excerpt">
-                Investigating sensory durability across natural stone, fluted oak panels, and unlacquered brass hardware that ages gracefully with touch and atmospheric patina over decades of occupancy.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 5 -->
-          <article class="card-item" data-category="architecture">
-            <div class="card-media">
-              <img src="images/travel_nordic.jpg" alt="Nordic Waterfront Urbanism" loading="lazy">
-              <span class="card-tag">Architecture</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0825</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">Nordic Waterfront Urbanism &amp; Civic Scale</h3>
-              <p class="card-excerpt">
-                Copenhagen’s contemporary timber harbor pavilions merge civic infrastructure with human-centric public spaces. Low-carbon laminated timber construction creates sustainable architectural vitality.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="card-item" data-category="spatial">
-            <div class="card-media">
-              <img src="experiences_salon.jpg" alt="Spatial Salon Encounters" loading="lazy">
-              <span class="card-tag">Spatial Art</span>
-            </div>
-            <div class="card-content">
-              <div class="card-meta-row">
-                <span>Ref #0826</span>
-                <span>60 Words</span>
-              </div>
-              <h3 class="card-title">Spatial Installations &amp; Sculptural Light</h3>
-              <p class="card-excerpt">
-                Illumination as architectural sculpture. Analyzing how linear minimalist luminaires define boundaries, frame voids, and evoke emotional warmth within brutalist and travertine interiors.
-              </p>
-              <button class="card-action" data-read-short>
-                Read 60-word Short <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-        </div>
-
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Section 2: EVENTS (Slide 3 Composition - Alternating Split Layout)
-         ========================================================================== -->
-    <section class="section-spacing events-section" id="events">
-      <div class="container">
-        
-        <div class="events-split-grid">
-          
-          <!-- Left: Editorial Content & Event Schedule -->
-          <div>
-            <span class="category-eyebrow">02 / Gatherings &amp; Salons</span>
-            <h2 class="section-title">Events</h2>
-            <p class="lead-body" style="margin-top: 14px;">
-              From private salon roundtables and material explorations to international architecture symposiums, A’bcd brings the design community together beyond the drawing board.
-            </p>
-
-            <div class="events-list">
-              
-              <!-- Event 1 -->
-              <div class="event-row">
-                <div class="event-date-box">
-                  <span class="event-date-day">14</span>
-                  <span class="event-date-month">Nov</span>
-                </div>
-                <div class="event-info">
-                  <h3>A’bcd Architecture Salon #04: The Future of Dense Urbanism</h3>
-                  <div class="event-meta">
-                    <span>London &amp; Global Broadcast</span>
-                    <span>40 Limited Seats</span>
-                  </div>
-                </div>
-                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Architecture Salon #04">RSVP</button>
-              </div>
-
-              <!-- Event 2 -->
-              <div class="event-row">
-                <div class="event-date-box">
-                  <span class="event-date-day">28</span>
-                  <span class="event-date-month">Nov</span>
-                </div>
-                <div class="event-info">
-                  <h3>Materiality &amp; Tactility: Hands-on Workshop with Master Artisans</h3>
-                  <div class="event-meta">
-                    <span>Milan Design District</span>
-                    <span>Curated Workshop</span>
-                  </div>
-                </div>
-                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Materiality Workshop Milan">RSVP</button>
-              </div>
-
-              <!-- Event 3 -->
-              <div class="event-row">
-                <div class="event-date-box">
-                  <span class="event-date-day">12</span>
-                  <span class="event-date-month">Dec</span>
-                </div>
-                <div class="event-info">
-                  <h3>Design Biennale Roundtable: Computational Craft &amp; AI Initiatives</h3>
-                  <div class="event-meta">
-                    <span>Venice / Tokyo Live</span>
-                    <span>Panel &amp; Networking</span>
-                  </div>
-                </div>
-                <button class="btn btn-outline btn-sm" data-open="joinDlg" data-event-name="Design Biennale Roundtable">RSVP</button>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Right: Visual Feature Card representing Slide 3 mockup -->
-          <div>
-            <div class="card-item" style="box-shadow: var(--shadow-card); background: #FFFFFF;">
-              <div class="card-media" style="aspect-ratio: 16/11;">
-                <img src="experiences_salon.jpg" alt="A'bcd Salon Event">
-                <span class="card-tag">Featured Salon</span>
-              </div>
-              <div class="card-content">
-                <div class="card-meta-row">
-                  <span>Upcoming Gathering</span>
-                  <span>London / Milan</span>
-                </div>
-                <h3 class="card-title">A’bcd Design Salon Series: Conversations Beyond Disciplines</h3>
-                <p class="card-excerpt">
-                  Where creative minds connect over shared ideas, material prototypes, and architectural visions. We curate focused private gatherings where honest dialogue happens freely.
-                </p>
-                <button class="btn btn-primary" data-open="joinDlg" data-event-name="General Salon Series Registration">
-                  Register for Upcoming Gatherings
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Section 3: ARCHITECTURAL TRAVEL (Slide 4 Composition)
-         ========================================================================== -->
-    <section class="section-spacing travel-section" id="travel">
-      <div class="container">
-        
-        <div class="section-header-split">
-          <div>
-            <span class="category-eyebrow">03 / Expeditions &amp; Field Studies</span>
-            <h2 class="section-title">Architectural Travel</h2>
-          </div>
+    <!-- Slide 4: Architectural Travel -->
+    <section class="ppt-section" id="travel">
+      <div class="container ppt-grid ppt-right">
+        <!-- Copy on Left -->
+        <div class="ppt-copy">
+          <span class="ppt-label">Architectural Travel</span>
           <p class="lead-body">
-            Immersive architectural travel expeditions, global design tours, heritage study trips, and city walks curated specifically for architects and creative practitioners.
+            We pick up articles from all your favourite sources and present them in 60-word shorts. Read full articles for shorts that interest you, within the app.
           </p>
         </div>
 
-        <div class="travel-grid">
-          
-          <!-- Expedition 1: Kyoto -->
-          <article class="travel-card">
-            <div class="travel-media">
-              <img src="images/travel_kyoto.jpg" alt="Kyoto Architectural Expedition" loading="lazy">
-              <span class="travel-duration-badge">5 Days • 12 Places</span>
-            </div>
-            <div class="travel-body">
-              <span class="travel-destination">Kyoto &amp; Kansai, Japan</span>
-              <h3 class="travel-title">Modernist Timber &amp; Zen Spatial Geometry</h3>
-              <p class="travel-summary">
-                Study traditional sukiya-zukuri carpentry alongside contemporary timber masterworks by Tadao Ando, Kengo Kuma, and SANAA. Private temple access and architect-guided tours.
-              </p>
-              <div class="travel-details-list">
-                <div><strong>Curator:</strong> Kenzo Takahashi (Architect &amp; Historian)</div>
-                <div><strong>Group:</strong> Strictly limited to 12 practitioners</div>
+        <!-- Phone Mockup on Right -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>5:43</span>
               </div>
-              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Kyoto & Kansai 2026">
-                Request Expedition Dossier
-              </button>
-            </div>
-          </article>
-
-          <!-- Expedition 2: Copenhagen -->
-          <article class="travel-card">
-            <div class="travel-media">
-              <img src="images/travel_nordic.jpg" alt="Copenhagen Urbanism" loading="lazy">
-              <span class="travel-duration-badge">4 Days • 14 Places</span>
-            </div>
-            <div class="travel-body">
-              <span class="travel-destination">Copenhagen, Denmark</span>
-              <h3 class="travel-title">Nordic Urbanism &amp; Sustainable Civic Living</h3>
-              <p class="travel-summary">
-                An insider exploration of Danish sustainable urbanism, circular timber construction, waterfront revitalization, and adaptive reuse architecture across Copenhagen and Malmö.
-              </p>
-              <div class="travel-details-list">
-                <div><strong>Curator:</strong> Astrid Møller (Urban Architect)</div>
-                <div><strong>Group:</strong> Strictly limited to 14 practitioners</div>
+              <div class="phone-card" data-read-short data-category="Architectural Travel" data-headline="Kyoto Pavilion Studies: Modernist Timber Meets Zen Joinery" data-img="images/reference/travel_card.jpeg" data-text="An exclusive five-day architectural expedition through traditional teahouses, contemporary cedar pavilions, and water courtyards led by Japanese master craftsmen and contemporary architects." data-meta="5 Days • Kyoto & Uji • Autumn 2026" style="cursor: pointer;">
+                <div class="phone-card-media">
+                  <img src="images/reference/travel_card.jpeg" alt="Architectural Travel" class="phone-card-img" />
+                  <span class="phone-card-badge">Architectural Travel</span>
+                </div>
+                <div class="phone-card-body">
+                  <div>
+                    <h4 class="phone-card-headline">Kyoto Pavilion Studies: Modernist Timber Meets Zen Joinery</h4>
+                    <p class="phone-card-text">An exclusive five-day architectural expedition through traditional teahouses, contemporary cedar pavilions, and water courtyards led by Japanese master craftsmen and contemporary architects.</p>
+                    <p class="phone-card-meta">5 Days • Kyoto &amp; Uji • Autumn 2026</p>
+                  </div>
+                  <div class="phone-card-footer">
+                    <span class="phone-tap-prompt">Tap to read full short →</span>
+                  </div>
+                </div>
               </div>
-              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Copenhagen Urbanism 2026">
-                Request Expedition Dossier
-              </button>
             </div>
-          </article>
-
-          <!-- Expedition 3: Swiss Alps -->
-          <article class="travel-card">
-            <div class="travel-media">
-              <img src="hero_collaboration.jpg" alt="Swiss Stone Architecture" loading="lazy">
-              <span class="travel-duration-badge">4 Days • 10 Places</span>
-            </div>
-            <div class="travel-body">
-              <span class="travel-destination">Vals &amp; Basel, Switzerland</span>
-              <h3 class="travel-title">Swiss Stone Architecture &amp; Thermal Sanctuaries</h3>
-              <p class="travel-summary">
-                Experience Peter Zumthor's Therme Vals, Herzog &amp; de Meuron's Vitra Campus, and private Swiss architectural studios focused on monolithic craftsmanship and local stone materiality.
-              </p>
-              <div class="travel-details-list">
-                <div><strong>Curator:</strong> Christian Weiss (Spatial Designer)</div>
-                <div><strong>Group:</strong> Strictly limited to 10 practitioners</div>
-              </div>
-              <button class="btn btn-outline btn-sm" data-open="contactDlg" data-travel-dest="Swiss Stone & Thermal Vals 2026">
-                Request Expedition Dossier
-              </button>
-            </div>
-          </article>
-
+          </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Section 4: NETWORKING (Slide 5 Composition)
-         ========================================================================== -->
-    <section class="section-spacing networking-section" id="networking">
-      <div class="container">
-        
-        <div class="section-header-split">
-          <div>
-            <span class="category-eyebrow">04 / Creative Fraternity Directory</span>
-            <h2 class="section-title">Networking</h2>
-          </div>
+    <!-- Slide 5: Networking -->
+    <section class="ppt-section" id="networking">
+      <div class="container ppt-grid ppt-right">
+        <!-- Copy on Left -->
+        <div class="ppt-copy">
+          <span class="ppt-label">Networking</span>
           <p class="lead-body">
-            Connect with the architects, interior designers, urbanists, and makers shaping our built environment. Build relationships beyond the drawing board.
+            We pick up articles from all your favourite sources and present them in 60-word shorts. Read full articles for shorts that interest you, within the app.
           </p>
         </div>
 
-        <div class="networking-grid">
-          
-          <!-- Member 1 -->
-          <div class="profile-card">
-            <div class="profile-avatar">EV</div>
-            <h3 class="profile-name">Ar. Elena Vance</h3>
-            <span class="profile-role">Principal Architect</span>
-            <span class="profile-location">London, UK • Studio Forma</span>
-            <p class="profile-bio">Specializing in contemporary cultural institutions, low-carbon rammed earth, and adaptive civic reuse.</p>
-            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
-          </div>
-
-          <!-- Member 2 -->
-          <div class="profile-card">
-            <div class="profile-avatar">MC</div>
-            <h3 class="profile-name">Marcus Chen</h3>
-            <span class="profile-role">Interior Design Director</span>
-            <span class="profile-location">Copenhagen, DK • Atelier Chen</span>
-            <p class="profile-bio">Focused on sensory hospitality interiors, bespoke joinery, and minimalist residential atmospheres.</p>
-            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
-          </div>
-
-          <!-- Member 3 -->
-          <div class="profile-card">
-            <div class="profile-avatar">PS</div>
-            <h3 class="profile-name">Priya Sharma</h3>
-            <span class="profile-role">Materiality Consultant</span>
-            <span class="profile-location">Mumbai, IN • Surface Lab</span>
-            <p class="profile-bio">Curating artisanal stone, acoustic fiber systems, and vernacular architectural craft traditions.</p>
-            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
-          </div>
-
-          <!-- Member 4 -->
-          <div class="profile-card">
-            <div class="profile-avatar">JM</div>
-            <h3 class="profile-name">Julian Moreau</h3>
-            <span class="profile-role">Urbanist &amp; Landscape Lead</span>
-            <span class="profile-location">Paris, FR • Bureau Territoire</span>
-            <p class="profile-bio">Designing biophilic urban ecosystems, pedestrian corridors, and public botanical installations.</p>
-            <button class="btn btn-outline btn-sm" data-open="joinDlg">Connect</button>
-          </div>
-
-        </div>
-
-        <!-- Community Values Block -->
-        <div class="values-panel">
-          <span class="category-eyebrow">The ABCD Philosophy</span>
-          <h2 class="section-title">A different way to connect.</h2>
-          
-          <div class="values-grid">
-            <div class="value-item">
-              <h3>People over Profiles</h3>
-              <p>We believe meaningful relationships begin with genuine conversations, shared interests, and a willingness to learn from one another.</p>
-            </div>
-            <div class="value-item">
-              <h3>Design beyond Disciplines</h3>
-              <p>Architecture, interiors, materials, lighting, furniture, and technology intersect. We bring different perspectives into the same conversation.</p>
-            </div>
-            <div class="value-item">
-              <h3>Community beyond Business</h3>
-              <p>Not every interaction needs to become a transaction. We want to create a space where relationships grow naturally and opportunities follow.</p>
+        <!-- Phone Mockup on Right -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>5:43</span>
+              </div>
+              <div class="phone-card" data-read-short data-category="Networking" data-headline="Creative Directory: 12,000+ Architects & Interior Designers" data-img="images/reference/networking_card.jpeg" data-text="A'bcd connects the creative fraternity across disciplines. Exchange ideas, discover material sources, collaborate on international competitions, and build relationships beyond the drawing board." data-meta="London • Copenhagen • Mumbai • Tokyo" style="cursor: pointer;">
+                <div class="phone-card-media">
+                  <img src="images/reference/networking_card.jpeg" alt="Networking" class="phone-card-img" />
+                  <span class="phone-card-badge">Networking</span>
+                </div>
+                <div class="phone-card-body">
+                  <div>
+                    <h4 class="phone-card-headline">Creative Directory: 12,000+ Architects &amp; Interior Designers</h4>
+                    <p class="phone-card-text">A'bcd connects the creative fraternity across disciplines. Exchange ideas, discover material sources, collaborate on international competitions, and build relationships beyond the drawing board.</p>
+                    <p class="phone-card-meta">London • Copenhagen • Mumbai • Tokyo</p>
+                  </div>
+                  <div class="phone-card-footer">
+                    <span class="phone-tap-prompt">Tap to read full short →</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Community Brands & Partners Carousel (Preserved & Elevated)
-         ========================================================================== -->
+    <!-- Brands Carousel Section -->
     <section class="brands-section" id="brands">
       <div class="container">
-        <div class="brands-header">
-          <div>
-            <span class="category-eyebrow">AEC Partnerships</span>
-            <h2 class="section-title" style="font-size: 1.8rem;">Brands &amp; Studios We Deal With</h2>
-          </div>
-          <span style="font-size: 0.9rem; color: var(--color-accent); font-weight: 500;">Curated international materials, surfaces, sanitaryware &amp; bespoke fittings</span>
-        </div>
-
-        <div class="brands-carousel">
-          <button class="carousel-arrow" id="brandPrev" aria-label="Previous brands">&larr;</button>
-          <div class="carousel-viewport" id="brandViewport" tabindex="0" aria-label="Brand partners list">
-            <div class="carousel-track" id="brandTrack">
-              <div class="brand-box" title="Falper - Italian Luxury Bathrooms">
-                <img src="images/brands/brand_clean_01.png" alt="Falper" class="brand-card-logo">
-                <span class="brand-name-sub">Falper</span>
-              </div>
-              <div class="brand-box" title="Fima Carlo Frattini - Italian Rubinetterie">
-                <img src="images/brands/brand_clean_02.png" alt="Fima Carlo Frattini" class="brand-card-logo">
-                <span class="brand-name-sub">Fima Carlo Frattini</span>
-              </div>
-              <div class="brand-box" title="Formica - Architectural Laminates">
-                <img src="images/brands/brand_clean_03.png" alt="Formica" class="brand-card-logo">
-                <span class="brand-name-sub">Formica</span>
-              </div>
-              <div class="brand-box" title="NewTechWood - Architectural Cladding">
-                <img src="images/brands/brand_clean_04.png" alt="NewTechWood" class="brand-card-logo">
-                <span class="brand-name-sub">NewTechWood</span>
-              </div>
-              <div class="brand-box" title="Waltz - Door &amp; Partition Systems">
-                <img src="images/brands/brand_clean_05.png" alt="Waltz" class="brand-card-logo">
-                <span class="brand-name-sub">Waltz Partitions</span>
-              </div>
-              <div class="brand-box" title="Loco Design - Luxury Furniture &amp; Craft">
-                <img src="images/brands/brand_clean_06.png" alt="Loco Design" class="brand-card-logo">
-                <span class="brand-name-sub">Loco Design</span>
-              </div>
-              <div class="brand-box" title="WOW - Ceramic Tile Architecture">
-                <img src="images/brands/brand_clean_07.png" alt="WOW" class="brand-card-logo">
-                <span class="brand-name-sub">WOW Design</span>
-              </div>
-              <div class="brand-box" title="Slashform - Parametric &amp; Architectural Fabrication">
-                <img src="images/brands/brand_clean_08.png" alt="Slashform" class="brand-card-logo">
-                <span class="brand-name-sub">Slashform</span>
-              </div>
-              <div class="brand-box" title="Peel Ply - High Performance Veneers">
-                <img src="images/brands/brand_clean_09.png" alt="Peel Ply" class="brand-card-logo">
-                <span class="brand-name-sub">Peel Ply</span>
-              </div>
-              <div class="brand-box" title="Bodaq - Hyundai Interior Film">
-                <img src="images/brands/brand_clean_10.png" alt="Bodaq" class="brand-card-logo">
-                <span class="brand-name-sub">Bodaq Film</span>
-              </div>
-              <div class="brand-box" title="IW Surfaces - Architectural Finishes">
-                <img src="images/brands/brand_clean_11.png" alt="IW" class="brand-card-logo">
-                <span class="brand-name-sub">IW Surfaces</span>
-              </div>
-              <div class="brand-box" title="Agape - Italian Design Bathrooms">
-                <img src="images/brands/brand_clean_12.png" alt="Agape" class="brand-card-logo">
-                <span class="brand-name-sub">Agape</span>
-              </div>
-              <div class="brand-box" title="Mirage - Porcelain Stoneware Architecture">
-                <img src="images/brands/brand_clean_13.png" alt="Mirage" class="brand-card-logo">
-                <span class="brand-name-sub">Mirage Granito</span>
-              </div>
-              <div class="brand-box" title="Mafi - Austrian Natural Wood Floors">
-                <img src="images/brands/brand_clean_14.png" alt="Mafi" class="brand-card-logo">
-                <span class="brand-name-sub">Mafi Wood</span>
-              </div>
-              <div class="brand-box" title="Inclass Veneer - Architectural Timber Surfaces">
-                <img src="images/brands/brand_clean_15.png" alt="Inclass Veneer" class="brand-card-logo">
-                <span class="brand-name-sub">Inclass Veneer</span>
-              </div>
-              <div class="brand-box" title="Inkiostro Bianco - Bespoke Surfaces &amp; Wallpapers">
-                <img src="images/brands/brand_clean_16.png" alt="Inkiostro Bianco" class="brand-card-logo">
-                <span class="brand-name-sub">Inkiostro Bianco</span>
-              </div>
+        <div class="brands-marquee" aria-label="Brand partners">
+          <div class="brands-track">
+            <!-- Group 1 -->
+            <div class="brand-box" title="Falper - Italian Luxury Bathrooms">
+              <img src="images/brands/brand_clean_01.png" alt="Falper" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Fima Carlo Frattini - Italian Rubinetterie">
+              <img src="images/brands/brand_clean_02.png" alt="Fima Carlo Frattini" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Formica - Architectural Laminates">
+              <img src="images/brands/brand_clean_03.png" alt="Formica" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="NewTechWood - Architectural Cladding">
+              <img src="images/brands/brand_clean_04.png" alt="NewTechWood" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Waltz - Door &amp; Partition Systems">
+              <img src="images/brands/brand_clean_05.png" alt="Waltz" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Loco Design - Luxury Furniture &amp; Craft">
+              <img src="images/brands/brand_clean_06.png" alt="Loco Design" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="WOW - Ceramic Tile Architecture">
+              <img src="images/brands/brand_clean_07.png" alt="WOW" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Slashform - Parametric &amp; Architectural Fabrication">
+              <img src="images/brands/brand_clean_08.png" alt="Slashform" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Peel Ply - High Performance Veneers">
+              <img src="images/brands/brand_clean_09.png" alt="Peel Ply" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Bodaq - Hyundai Interior Film">
+              <img src="images/brands/brand_clean_10.png" alt="Bodaq" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="IW Surfaces - Architectural Finishes">
+              <img src="images/brands/brand_clean_11.png" alt="IW" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Agape - Italian Design Bathrooms">
+              <img src="images/brands/brand_clean_12.png" alt="Agape" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Mirage - Porcelain Stoneware Architecture">
+              <img src="images/brands/brand_clean_13.png" alt="Mirage" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Mafi - Austrian Natural Wood Floors">
+              <img src="images/brands/brand_clean_14.png" alt="Mafi" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Inclass Veneer - Architectural Timber Surfaces">
+              <img src="images/brands/brand_clean_15.png" alt="Inclass Veneer" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" title="Inkiostro Bianco - Bespoke Surfaces &amp; Wallpapers">
+              <img src="images/brands/brand_clean_16.png" alt="Inkiostro Bianco" class="brand-card-logo" />
+            </div>
+            <!-- Duplicate Group 2 for seamless loop -->
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_01.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_02.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_03.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_04.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_05.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_06.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_07.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_08.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_09.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_10.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_11.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_12.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_13.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_14.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_15.png" alt="" class="brand-card-logo" />
+            </div>
+            <div class="brand-box" aria-hidden="true">
+              <img src="images/brands/brand_clean_16.png" alt="" class="brand-card-logo" />
             </div>
           </div>
-          <button class="carousel-arrow" id="brandNext" aria-label="Next brands">&rarr;</button>
         </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Final Call to Action
-         ========================================================================== -->
-    <section class="final-cta" id="contact">
-      <div class="container">
-        <h2>Your people. Your perspective. Your design community.</h2>
-        <p class="lead-body">
-          Whether you’re an architect, interior designer, creative professional, or someone shaping the future of spaces, there’s a place for you at A’bcd. Come for the conversations. Stay for the connections.
-        </p>
-
-        <div class="final-actions">
-          <button class="btn btn-primary" data-open="joinDlg">Be part of A’bcd</button>
-          <button class="btn btn-outline" data-open="contactDlg">Get in touch</button>
-        </div>
-
-        <p class="final-initiative">An initiative by AAREN INTPRO</p>
       </div>
     </section>
   </main>
 
-  <!-- ==========================================================================
-       Site Footer
-       ========================================================================== -->
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#hero" aria-label="A'bcd Home">
-          <img src="logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="footer-logo-img" width="160" height="43">
+          <img src="images/reference/logo.png" alt="A’bcd — all ’bout creativity &amp; design" class="footer-logo-img" width="160" height="43" />
         </a>
-        <p style="margin-top: 4px;">&copy; 2026 A’bcd. An initiative by AAREN INTPRO. All rights reserved.</p>
+        <p style="margin-top: 4px;">© 2026 A’bcd. An initiative by AAREN INTPRO. All rights reserved.</p>
       </div>
-
       <ul class="footer-nav">
         <li><button data-open="contactDlg">Contact Us</button></li>
         <li><button data-open="privacyDlg">Privacy Policy</button></li>
@@ -745,27 +429,28 @@
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       Modals & Dialogs (Preserved and Functional)
-       ========================================================================== -->
-
-  <!-- Membership Application Dialog -->
+  <!-- Dialogs & Modals -->
+  <!-- Join Modal -->
   <dialog id="joinDlg" aria-labelledby="joinTitle">
     <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
     <h3 id="joinTitle">Become a member</h3>
     <p>Join architects, interior designers, and creative professionals shaping our built environment.</p>
     <form data-form>
-      <label>Full name
-        <input required name="name" autocomplete="name" placeholder="e.g. Ar. Elena Vance">
+      <label>
+        Full name
+        <input name="name" placeholder="e.g. Ar. Elena Vance" required autocomplete="name" />
       </label>
-      <label>Email address
-        <input required type="email" name="email" autocomplete="email" placeholder="elena@studioforma.com">
+      <label>
+        Email address
+        <input type="email" name="email" placeholder="elena@studioforma.com" required autocomplete="email" />
       </label>
-      <label>Studio, firm or practice
-        <input name="firm" placeholder="e.g. Studio Forma">
+      <label>
+        Studio, firm or practice
+        <input name="firm" placeholder="e.g. Studio Forma" />
       </label>
-      <label>Discipline
-        <select required name="discipline">
+      <label>
+        Discipline
+        <select name="discipline" required>
           <option value="">Select your discipline</option>
           <option>Architecture</option>
           <option>Interior Design</option>
@@ -774,35 +459,39 @@
           <option>Other Creative Profession</option>
         </select>
       </label>
-      <label>City &amp; Country
-        <input name="city" placeholder="e.g. London, United Kingdom">
+      <label>
+        City &amp; Country
+        <input name="city" placeholder="e.g. London, United Kingdom" />
       </label>
-      <button class="btn btn-primary" type="submit" style="margin-top: 8px;">Submit application</button>
+      <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Submit application</button>
       <div class="form-feedback-ok" role="status">Thank you. Your application has been received. Our team will review your credentials shortly.</div>
     </form>
   </dialog>
 
-  <!-- Contact Us Dialog -->
+  <!-- Contact Modal -->
   <dialog id="contactDlg" aria-labelledby="contactTitle">
     <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
     <h3 id="contactTitle">Get in touch</h3>
     <p>Suggest a gathering, inquire about an architectural expedition, or share an idea with our team.</p>
     <form data-form>
-      <label>Full name
-        <input required name="name" autocomplete="name" placeholder="Your name">
+      <label>
+        Full name
+        <input name="name" placeholder="Your name" required autocomplete="name" />
       </label>
-      <label>Email address
-        <input required type="email" name="email" autocomplete="email" placeholder="yourname@domain.com">
+      <label>
+        Email address
+        <input type="email" name="email" placeholder="yourname@domain.com" required autocomplete="email" />
       </label>
-      <label>Message
-        <textarea required rows="4" name="msg" placeholder="Tell us how we can help or collaborate..."></textarea>
+      <label>
+        Message
+        <textarea name="msg" placeholder="Tell us how we can help or collaborate..." rows="4" required></textarea>
       </label>
-      <button class="btn btn-primary" type="submit" style="margin-top: 8px;">Send message</button>
+      <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Send message</button>
       <div class="form-feedback-ok" role="status">Thank you. Your message has been dispatched to the A’bcd community team.</div>
     </form>
   </dialog>
 
-  <!-- Terms & Conditions Dialog -->
+  <!-- Terms & Conditions Modal -->
   <dialog id="termsDlg" aria-labelledby="termsTitle">
     <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
     <h3 id="termsTitle">Terms &amp; Conditions</h3>
@@ -814,7 +503,7 @@
     <p style="margin-top: 6px;">Membership is subject to periodic review by the community committee to maintain high standards of professional engagement.</p>
   </dialog>
 
-  <!-- Privacy Policy Dialog -->
+  <!-- Privacy Policy Modal -->
   <dialog id="privacyDlg" aria-labelledby="privacyTitle">
     <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
     <h3 id="privacyTitle">Privacy Policy</h3>
@@ -826,7 +515,7 @@
     <p style="margin-top: 6px;">You may request updates, corrections, or deletion of your profile data at any time by contacting our community team.</p>
   </dialog>
 
-  <!-- Interactive 60-Word Short Reader Dialog -->
+  <!-- 60-Word Short Reader Modal -->
   <dialog id="cardDetailDlg" aria-labelledby="readerTitle">
     <button class="modal-close-btn" data-close aria-label="Close dialog">&times;</button>
     <div class="reader-modal-header">
@@ -835,7 +524,7 @@
       <p id="readerMeta" style="font-size: 0.82rem; color: var(--color-accent); margin-top: 4px;">60 Words • A'bcd Editorial</p>
     </div>
     <div class="reader-modal-media">
-      <img src="images/material-library.jpg" alt="Short media" id="readerImage">
+      <img id="readerImage" src="images/reference/hero_card.jpeg" alt="Short media" />
     </div>
     <div class="reader-short-box">
       <p id="readerShort" style="color: var(--text-black); font-size: 1.02rem; line-height: 1.7;"></p>
@@ -846,16 +535,15 @@
     </div>
   </dialog>
 
-  <!-- Cookie Notice Banner -->
+  <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent banner">
     <p>We use essential cookies to maintain performance and anonymous analytics to improve the A’bcd creative platform.</p>
     <div class="cookie-row">
-      <button class="cookie-btn accept" id="cookieAccept" type="button">Accept</button>
-      <button class="cookie-btn" id="cookieDecline" type="button">Decline</button>
+      <button type="button" class="cookie-btn accept" id="cookieAccept">Accept</button>
+      <button type="button" class="cookie-btn" id="cookieDecline">Decline</button>
     </div>
   </div>
 
-  <!-- Client-Side Controller -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -70,8 +70,8 @@
 
 html {
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.65;
   color: var(--text-body);
   background-color: var(--bg-primary);
   scroll-behavior: smooth;
@@ -123,8 +123,8 @@ button {
 }
 
 .section-spacing {
-  padding-top: 104px;
-  padding-bottom: 104px;
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 
 .section-divider {
@@ -143,7 +143,7 @@ h1, h2, h3, h4 {
 
 .display-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
   font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -152,7 +152,7 @@ h1, h2, h3, h4 {
 
 .section-title {
   font-family: var(--font-sans);
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -160,7 +160,7 @@ h1, h2, h3, h4 {
 }
 
 .lead-body {
-  font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.95rem, 1vw, 1.02rem);
   line-height: 1.68;
   color: var(--text-muted);
   max-width: 54ch;
@@ -364,19 +364,19 @@ h1, h2, h3, h4 {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 38px;
   list-style: none;
 }
 
 .nav-link {
   position: relative;
   font-family: var(--font-sans);
-  font-size: 0.84rem;
+  font-size: 0.73rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-primary);
-  padding: 10px 0;
+  padding: 6px 0;
   transition: color 0.2s ease;
 }
 
@@ -483,7 +483,7 @@ h1, h2, h3, h4 {
 
 /* Hero Partner Brands Strip (WhatsApp Reference - Replaces old initiative line) */
 .hero-partner-brands {
-  margin-bottom: 22px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -611,7 +611,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 
 .hero-description {
@@ -1281,63 +1281,41 @@ h1, h2, h3, h4 {
    Brands Carousel Section
    ========================================================================== */
 .brands-section {
-  padding: 80px 0;
+  padding: 72px 0;
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-hairline);
 }
 
-.brands-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 36px;
-}
-
-.brands-carousel {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.carousel-arrow {
-  flex: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border-light);
-  background-color: transparent;
-  color: var(--text-primary);
-  font-size: 1.1rem;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: all 0.2s ease;
-}
-
-.carousel-arrow:hover {
-  background-color: var(--text-primary);
-  border-color: var(--text-primary);
-  color: var(--bg-primary);
-}
-
-.carousel-viewport {
+.brands-marquee {
   overflow: hidden;
-  flex: 1;
-  padding: 8px 0;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 }
 
-.carousel-track {
+.brands-track {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   width: max-content;
+  padding: 8px 0;
+  animation: brandsScroll 36s linear infinite;
   will-change: transform;
 }
 
+@keyframes brandsScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+  to   { transform: translateX(calc(-50% - 12px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Marquee active */
+}
+
 .brand-box {
-  width: 190px;
-  height: 110px;
+  width: 170px;
+  height: 88px;
   border-radius: var(--radius-md);
   background-color: #FFFFFF;
   border: 1px solid var(--border-hairline);
@@ -1802,3 +1780,38 @@ input:focus, select:focus, textarea:focus {
     max-width: none;
   }
 }
+
+
+/* ==========================================================================
+   PPT layout: phone on one side, small label + paragraph on the other
+   ========================================================================== */
+.ppt-section {
+  padding: 120px 0;
+  border-top: 1px solid var(--border-hairline);
+}
+.ppt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+.ppt-copy { max-width: 460px; }
+.ppt-right .ppt-copy { justify-self: start; }
+.ppt-left .ppt-copy { justify-self: start; }
+.ppt-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+.ppt-copy .store-badges { margin-top: 32px; }
+.ppt-section .phone-card-body { display: flex; flex-direction: column; justify-content: space-between; }
+@media (max-width: 900px) {
+  .ppt-grid { grid-template-columns: 1fr; gap: 48px; }
+  .ppt-section { padding: 80px 0; }
+  .ppt-right .phone-mockup-wrapper { order: -1; }
+}
+
