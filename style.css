@@ -1298,14 +1298,12 @@ h1, h2, h3, h4 {
   gap: 24px;
   width: max-content;
   padding: 8px 0;
-  animation: brandsScroll 36s linear infinite;
+  animation: brandsScroll 40s linear infinite;
   will-change: transform;
 }
 
 @keyframes brandsScroll {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
   to   { transform: translateX(calc(-50% - 12px)); }
 }
 
